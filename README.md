@@ -1,4 +1,4 @@
-### Hi there 👋
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&duration=3000&pause=1000&color=00DA17&center=true&vCenter=true&width=435&lines=Hi+There;I+am+Bineet+;Currently+working+as+Ph.D.+scholar+;at+;Computational+Biology;+and+;Bioinformatics+Lab;ILS%2C+Bhubaneswar)](https://git.io/typing-svg)
 
 <!--
 **BineetX/BineetX** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
