@@ -48,33 +48,10 @@ A microbial genome analysis server bringing bioinformatics workflows into a web 
 [Code](GENOCULAR_REPOSITORY_URL) · [Demo](GENOCULAR_DEMO_URL) · [Documentation](GENOCULAR_DOCS_URL)
 -->
 
-### Biological knowledge-graph explorer
+## Current Research interests
 
-<img src="assets/knowledge-graph.svg" width="100%" alt="Biological knowledge-graph explorer — relationships and supporting evidence" />
-
-An exploratory project for navigating biological relationships and their supporting evidence.
-
-**Focus:** knowledge graphs · GraphRAG · interactive exploration
-
-<!-- [Code](KNOWLEDGE_GRAPH_REPOSITORY_URL) · [Demo](KNOWLEDGE_GRAPH_DEMO_URL) -->
-
-### Drug-synergy prediction
-
-<img src="assets/drug-synergy.svg" width="100%" alt="Drug-synergy prediction — graph learning with biological context" />
-
-Research into predicting cancer drug-combination responses using graph learning and biological context.
-
-**Focus:** heterogeneous graphs · molecular representations · cell-line context
-
-<!-- [Code](DRUG_SYNERGY_REPOSITORY_URL) · [Paper](DRUG_SYNERGY_PAPER_URL) -->
-
-<!-- These SVGs are illustrative project covers, not screenshots or result figures.
-For a stronger showcase, replace a cover with your actual screenshot or a short GIF.
--->
-
-## Research interests
-
-- Drug combinations and cancer-cell responses
+- Bioinformatics and Machine Learning
+- Mathematical Modelling
 - Graph neural networks and multimodal learning
 - Biological knowledge graphs and evidence exploration
 - Reproducible bioinformatics workflows
