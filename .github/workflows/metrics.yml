@@ -1,0 +1,50 @@
+name: Generate profile metrics
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 0 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-metrics
+  cancel-in-progress: false
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+    steps:
+      # Optional workflow: steps are skipped until METRICS_TOKEN exists.
+      - name: Activity, languages, and 3D calendar
+        if: env.METRICS_TOKEN != ''
+        uses: lowlighter/metrics@latest
+        with:
+          user: ${{ github.repository_owner }}
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          filename: github-metrics.svg
+          base: header, activity, community, repositories
+          config_timezone: Asia/Kolkata
+          plugin_languages: yes
+          plugin_languages_limit: 6
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+      - name: Activity achievements
+        if: env.METRICS_TOKEN != ''
+        uses: lowlighter/metrics@latest
+        with:
+          user: ${{ github.repository_owner }}
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          filename: github-achievements.svg
+          base: ""
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: C
+          plugin_achievements_limit: 8
