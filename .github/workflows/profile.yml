@@ -1,0 +1,58 @@
+name: Refresh profile visuals
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 0 * * *"
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/profile.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.ref_name == github.event.repository.default_branch
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: "22"
+      - name: Check activity generator
+        run: node --test scripts/update-activity.test.mjs
+      - name: Build profile artwork
+        run: node scripts/build-artwork.mjs
+      - name: Refresh public repository snapshot
+        run: node scripts/update-activity.mjs
+        env:
+          PROFILE_USER: ${{ github.repository_owner }}
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Generate contribution animation
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake.svg?color_snake=#618C70&color_dots=#EBF0EB,#D1E5D6,#ACCDB5,#82B091,#547B61
+            assets/github-snake-dark.svg?palette=github-dark&color_snake=#E9EBDD&color_dots=#18211D,#304A3A,#567A60,#85AF90,#B5E8C3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Commit refreshed assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/banner.svg assets/banner-mobile.svg assets/genocular.svg assets/gememiom.svg assets/myocircbase.svg assets/research.svg assets/research-mobile.svg assets/activity.svg assets/activity-mobile.svg assets/github-snake.svg assets/github-snake-dark.svg
+          if git diff --cached --quiet; then
+            echo "Profile visuals are already current."
+            exit 0
+          fi
+          git commit -m "chore: refresh profile visuals"
+          git pull --rebase
+          git push

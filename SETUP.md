@@ -1,154 +1,112 @@
-# Set up your GitHub profile
+# Maintaining this profile
 
-This package is customized for `BineetX/BineetX`. It has not been published to GitHub.
+The README is a Markdown portfolio with repository-owned SVG artwork. Project
+names appear on compact covers; descriptions and links stay in `README.md`.
 
-## 1. Add the files
+## Edit or add projects
 
-Open https://github.com/BineetX/BineetX and work on its default branch.
-The profile repository must be public, with `README.md` at the repository root.
-If it does not exist, create a public repository named exactly `BineetX`.
-Keep a copy of your current README before replacing it.
+Edit the project descriptions directly in `README.md`. The comments below
+GemeMiom and MyoCircBase mark where to add their descriptions. End a description line with a backslash if you want the links on the next line.
 
-Upload or copy these paths, preserving their directories:
-
-- `README.md`
-- `assets/banner.svg`
-- `assets/genocular.svg`
-- `assets/knowledge-graph.svg`
-- `assets/drug-synergy.svg`
-- `.github/workflows/snake.yml`
-- `.github/workflows/metrics.yml` (optional)
-
-You can leave this `SETUP.md` out of the repository.
-If using the GitHub web interface, drag the `assets` folder into Add file → Upload files.
-For each workflow, use Add file → Create new file and type its complete path,
-such as `.github/workflows/snake.yml`, then paste the YAML and commit.
-Workflow files must be on the default branch for scheduled execution.
-
-## 2. Start the snake
-
-1. Open the repository's **Actions** tab.
-2. Enable Actions if GitHub prompts you.
-3. Select **Generate contribution snake**.
-4. Click **Run workflow**, select the default branch, and run it.
-5. Wait for the workflow to succeed, then refresh your profile.
-
-The workflow reads your contribution calendar and creates light/dark SVGs.
-It publishes them to a separate `output` branch. The README links already match.
-The first successful run creates the images; the README snake can look broken until then.
-The daily refresh is scheduled at 00:23 UTC (05:53 IST); scheduled runs may be delayed.
-No personal access token and no GitHub Pages site are needed for the snake.
-The built-in `GITHUB_TOKEN` is supplied automatically by GitHub Actions.
-
-If publishing fails with a permissions error, check Settings → Actions → General
-and applicable repository/organization workflow policies. The YAML already requests
-`contents: write`. Also check that branch protection allows creating/updating `output`.
-Never change the default branch to `output`; it holds generated images only.
-
-## 3. Customize the banner
-
-The default header uses Capsule Render with a navy → teal → violet gradient.
-Change these URL parameters in `README.md`:
-
-| Parameter | Current purpose |
-| --- | --- |
-| `text` | Your displayed name; encode spaces as `%20` |
-| `desc` | Short description |
-| `color` | Gradient stops: `0:0F172A,55:0F766E,100:7C3AED` |
-| `fontSize` | Name size |
-| `height` | Banner height |
-| `type` | Shape, currently `waving` |
-| `animation` | Name appearance, currently `fadeIn` |
-
-In HTML image URLs, retain `&amp;` between parameters.
-Use https://capsule-render.vercel.app to experiment with the generator.
-Capsule Render is an external service whose availability can vary.
-For a custom banner stored in your own repo, replace the first `<img>` with:
-
-```html
-<img src="assets/banner.svg" width="100%" alt="Bineet Kumar Mohanta — computational biology and bioinformatics" />
-```
-
-The included SVG is a static scientific network design that does not depend on an external banner service.
-
-## 4. Complete the project showcase
-
-The project names and summaries are starting points for your existing work.
-No repository names, demos, publication URLs, or awards have been invented.
-Search `README.md` for `_URL`, fill in the real links, then uncomment those blocks.
-Update descriptions and project maturity to reflect their current state.
-The three SVGs are illustrative covers, not screenshots or results.
-Replace a cover with an actual interface screenshot or a small GIF when available.
-Do not rename an asset without updating its README path.
-
-## 5. Badges and achievements
-
-There are three different kinds:
-
-1. **Native GitHub achievements:** GitHub awards these for qualifying events and
-   displays them in your profile sidebar. They are not enabled by README code.
-   Review Settings → Public profile → Contributions & Activity to manage visibility.
-2. **Your own awards, publications, and certificates:** use linked Shields.io badges.
-   Uncomment the Selected achievements template after adding genuine details.
-3. **Automated activity highlights:** the optional Metrics workflow creates its own
-   third-party achievement panel. These are separate from GitHub's native badges.
-
-A custom badge has this structure:
+To add another project, insert this before the research section:
 
 ```markdown
-[![Award](https://img.shields.io/badge/Award-YOUR_AWARD_NAME-D97706?style=flat-square)](YOUR_EVIDENCE_URL)
+#### Project name
+
+A short description of what the project does.\
+[Website ↗](https://example.org) · [Source ↗](https://github.com/BineetX/REPOSITORY)
 ```
 
-Use underscores or URL-encoded spaces in the badge's label/message. Link to a paper,
-award announcement, credential verification, or another relevant evidence page.
-Other useful project badges include release version, DOI, license, CI, and documentation.
-Add each only when it reflects the actual repository.
+A cover is optional. To create one matching the current set, add an entry to the
+`projects` array in `scripts/build-artwork.mjs`, add the generated filename to the
+workflow's `git add` list, and run:
 
-## 6. Optional activity, 3D calendar, and achievements panel
+```sh
+node scripts/build-artwork.mjs
+```
 
-This part needs a personal access token for reading public account information.
+Use the cover in place of the heading: `[![Project name](assets/name.svg)](URL)`.
+The artwork generator never edits the README or your project descriptions.
+GENOCULAR, GemeMiom, and MyoCircBase use the URLs supplied by the profile owner.
 
-1. In your account Settings → Developer settings → Personal access tokens → Tokens
-   (classic), generate a token with an expiry and **no scopes selected** for this public-data setup.
-   Copy it once. The Metrics documentation supports scopeless tokens for these features.
-2. In `BineetX/BineetX`, open Settings → Secrets and variables → Actions.
-3. Add a repository secret named exactly `METRICS_TOKEN` and paste the token as its value.
-   Keep the token out of the README and YAML; both use the secret reference.
-4. Add `.github/workflows/metrics.yml` from this package to the default branch.
-5. In Actions, manually run **Generate profile metrics** and wait for completion.
-6. Confirm that `github-metrics.svg` and `github-achievements.svg` exist at the root
-   of your default branch. Only then uncomment the GitHub highlights block in `README.md`.
+## Automatic refresh
 
-The built-in `GITHUB_TOKEN` commits the SVGs; the scopeless `METRICS_TOKEN` reads
-public account data. The optional workflow skips its steps if the secret is absent.
-Renew the secret when the personal token expires.
-The panel shows available activity highlights; sparse activity can produce a small panel.
-`plugin_achievements_threshold: C` avoids intentionally displaying locked achievements.
-It does not represent scientific awards or a validated assessment of expertise.
+Commit the README, assets, scripts, and `.github/workflows` to the default branch
+of the public `BineetX/BineetX` repository. Open **Actions → Refresh profile
+visuals → Run workflow** for an immediate refresh. Pushing changes to the scripts
+or this workflow also triggers it.
 
-## 7. Finish the profile
+The workflow runs daily at **05:53 India time (00:23 UTC)**. It:
 
-- Keep only Skill Icons for tools you actually use.
-- Add your real ORCID, Google Scholar, LinkedIn, and contact links in the commented block.
-- Pin your best repositories via Customize your pins on your profile (up to six items).
-- Put a screenshot, purpose, quick start, and documentation in each project's README.
-- A repository social-preview image is configured separately under Settings → Social preview.
-- View your profile in both light and dark themes and on a narrow screen.
+1. Checks the activity generator and rebuilds the vector artwork.
+2. Reads the public GitHub repository API to regenerate `assets/activity.svg`.
+3. Uses [Platane/snk](https://github.com/Platane/snk) to generate contribution
+   animations in matching light and dark palettes.
+4. Commits changed assets to the default branch with the built-in `GITHUB_TOKEN`.
 
-## References
+No personal token, hosted stats service, or GitHub Pages deployment is needed for
+this workflow. The checked-in assets render before the first scheduled run.
+GitHub can delay scheduled jobs or disable them for inactive public repositories.
+If a push is rejected, check repository rules for bot commits; the workflow
+already requests `contents: write`. It never force-pushes.
 
-- Profile README: https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme
-- Native badges and achievements: https://docs.github.com/en/account-and-profile/reference/profile-reference
-- Capsule Render: https://github.com/kyechan99/capsule-render
-- Typing SVG: https://github.com/DenverCoder1/readme-typing-svg
-- Skill Icons: https://github.com/tandpfun/skill-icons
-- Shields.io: https://shields.io/
-- Snake action: https://github.com/Platane/snk
-- Upstream snake publishing example: https://github.com/Platane/Platane/blob/master/.github/workflows/main.yml
-- Metrics setup: https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md
-- Metrics achievements: https://github.com/lowlighter/metrics/blob/master/source/plugins/achievements/README.md
+The old standalone snake workflow is replaced by this consolidated workflow.
+The existing `output` branch is no longer used and does not need to be removed.
 
-## Validation
+## What the activity panel measures
 
-README links and asset paths, SVG XML, workflow YAML, and ZIP contents were checked locally.
-The workflows have not been run against your GitHub account; their first run happens after upload.
+The panel uses the [public repository endpoint](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user).
+It follows pagination and excludes forks, private repositories, and the profile
+repository. Language counts use the primary language of each repository, not
+lines of code or proficiency. Repositories with no primary language contribute
+to the total but not to the language bars. Recent pushes exclude archived
+repositories and show GitHub's `pushed_at` date, which is not a commit count.
+The displayed refresh date uses `Asia/Kolkata`.
+
+A failed API request fails the refresh and leaves the checked-in panel intact.
+Project illustrations are decorative, not screenshots or experimental results.
+
+## Optional Metrics plugins
+
+`.github/workflows/metrics.yml` preserves the optional
+[lowlighter/metrics](https://github.com/lowlighter/metrics) integration, including
+languages, an isometric contribution calendar, and activity achievements.
+It runs only when manually dispatched and skips generation without a token.
+These supplementary panels are not part of the main README layout.
+
+To use it, follow the upstream [token setup instructions](https://github.com/lowlighter/metrics/blob/master/.github/readme/partials/documentation/setup/action.md),
+add a `METRICS_TOKEN` repository secret, and run **Optional profile insights**.
+For this public-data configuration, upstream documents a classic token with no
+scopes. The built-in token handles committing; the personal token reads metrics.
+After the workflow creates the files, you can add this to the README:
+
+```markdown
+<details>
+<summary>More GitHub insights</summary>
+
+![Activity, languages, and contribution calendar](github-metrics.svg)
+![Activity achievements](github-achievements.svg)
+
+</details>
+```
+
+These activity achievements are not GitHub's native profile achievements or
+scientific awards. The main profile works without this optional integration.
+
+## Local checks
+
+Requires Node.js 22 or newer; the profile scripts have no npm dependencies.
+
+```sh
+node scripts/build-artwork.mjs
+node --test scripts/update-activity.test.mjs
+node scripts/update-activity.mjs
+```
+
+The last command needs access to `api.github.com`. `PROFILE_USER` defaults to
+`BineetX`; `GITHUB_TOKEN` is optional locally and raises the API rate limit.
+Action revisions are pinned in the workflows; update them deliberately.
+
+The visual system uses charcoal `#101615`, ivory `#F2F0E7`, and mint `#B5E8C3`.
+All major images have accessible descriptions and local paths. Keep the diagrams
+simple and the descriptive copy in Markdown when extending the portfolio.
