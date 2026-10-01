@@ -1,9 +1,9 @@
 // Deterministic, dependency-free vector artwork. Run: node scripts/build-artwork.mjs
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const out = new URL('../assets/', import.meta.url);
 await mkdir(out, { recursive: true });
-const C = { bg: '#101615', line: '#2A3632', ink: '#F2F0E7', dim: '#A9B6AE', mint: '#B5E8C3', green: '#688F7A' };
+const C = { bg: '#0D1117', line: '#253347', ink: '#F0F6FC', dim: '#A7B6CA', mint: '#7DD3FC', green: '#487891' };
 const text = (x, y, value, size = 14, color = C.dim, attrs = '') => `<text x="${x}" y="${y}" fill="${color}" font-family="Arial, Helvetica, sans-serif" font-size="${size}" ${attrs}>${value}</text>`;
 const label = (x, y, value, color = C.dim) => text(x, y, value, 12, color, 'letter-spacing="2"');
 const line = (x1, y1, x2, y2, color = C.line, attrs = '') => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" ${attrs}/>`;
@@ -11,6 +11,17 @@ const circle = (x, y, r, color = C.mint, attrs = '') => `<circle cx="${x}" cy="$
 function svg(height, title, desc, body, width = 1000) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">
 <title id="title">${title}</title><desc id="desc">${desc}</desc>
+<style>
+  .globe { transform-origin: 799px 181px; animation: orbit 45s linear infinite; }
+  .rotor { transform-origin: 776px 74px; animation: orbit 24s linear infinite; }
+  .reverse { animation-direction: reverse; animation-duration: 32s; }
+  .signal { animation: signal 4s ease-in-out infinite alternate; }
+  .flow { stroke-dasharray: 18 7 2 7; animation: flow 6s linear infinite; }
+  @keyframes orbit { to { transform: rotate(360deg); } }
+  @keyframes signal { from { opacity: .3; } to { opacity: 1; } }
+  @keyframes flow { to { stroke-dashoffset: -204; } }
+  @media (prefers-reduced-motion: reduce) { .globe, .rotor, .signal, .flow { animation: none; } }
+</style>
 <rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="6" fill="${C.bg}" stroke="${C.line}"/>
 ${body}
 </svg>\n`;
@@ -40,9 +51,9 @@ let banner = label(42, 40, 'BINEETX     /     RESEARCH &amp; ENGINEERING', C.min
 banner += line(42, 60, 958, 60);
 banner += text(40, 139, 'Bineet Kumar', 54, C.ink, 'font-weight="600" letter-spacing="-2"');
 banner += text(37, 218, 'Mohanta', 86, C.ink, 'font-weight="700" letter-spacing="-4"');
-banner += text(42, 260, 'Biological questions. Computational thinking.', 18, C.dim);
-banner += `<ellipse cx="799" cy="181" rx="154" ry="53" transform="rotate(-28 799 181)" fill="none" stroke="${C.green}" stroke-width=".8"/>${globe}`;
-banner += circle(937, 113, 4) + circle(937, 113, 9, 'none', `stroke="${C.mint}" opacity=".35"`);
+banner += text(42, 260, 'Biology, through a computational lens.', 18, C.dim);
+banner += `<ellipse cx="799" cy="181" rx="154" ry="53" transform="rotate(-28 799 181)" fill="none" stroke="${C.green}" stroke-width=".8"/><g class="globe">${globe}</g>`;
+banner += circle(937, 113, 4, C.mint, 'class="signal"') + circle(937, 113, 9, 'none', `stroke="${C.mint}" opacity=".35"`);
 banner += line(42, 296, 958, 296);
 banner += label(42, 326, 'COMPUTATIONAL BIOLOGY');
 banner += label(379, 326, 'BIOINFORMATICS');
@@ -52,8 +63,8 @@ let compactBanner = label(24, 30, 'BINEETX / RESEARCH &amp; ENGINEERING', C.mint
 compactBanner += line(24, 46, 396, 46);
 compactBanner += text(23, 98, 'Bineet Kumar', 34, C.ink, 'font-weight="600" letter-spacing="-1"');
 compactBanner += text(21, 157, 'Mohanta', 62, C.ink, 'font-weight="700" letter-spacing="-3"');
-compactBanner += `<g transform="translate(104 56) scale(.32)">${globe}</g>`;
-compactBanner += text(24, 192, 'Biological questions. Computational thinking.', 14);
+compactBanner += `<g transform="translate(104 56) scale(.32)"><g class="globe">${globe}</g></g>`;
+compactBanner += text(24, 192, 'Biology, through a computational lens.', 14);
 compactBanner += line(24, 213, 396, 213);
 compactBanner += text(24, 239, 'Computational biology · Bioinformatics', 13, C.mint);
 compactBanner += text(24, 260, 'Scientific software', 13);
@@ -67,8 +78,8 @@ function arc(cx, cy, r, start, end) {
 // Project names live in artwork; descriptions and links remain editable Markdown.
 const projects = [
   { name: 'GENOCULAR', file: 'genocular', accent: C.mint },
-  { name: 'GemeMiom', file: 'gememiom', accent: '#B6CCC9' },
-  { name: 'MyoCircBase', file: 'myocircbase', accent: '#D9CEA9' },
+  { name: 'GemeMiom', file: 'gememiom', accent: '#A5B4FC' },
+  { name: 'MyoCircBase', file: 'myocircbase', accent: '#5EEAD4' },
 ];
 for (const [index, project] of projects.entries()) {
   let body = label(36, 36, `PROJECT / 0${index + 1}`, project.accent);
@@ -76,16 +87,20 @@ for (const [index, project] of projects.entries()) {
   body += line(595, 24, 595, 124);
   body += `<path d="M 936 40 H 954 V 58 M 935 59 L 954 40" fill="none" stroke="${project.accent}" stroke-width="1.5"/>`;
   if (index === 0) {
+    body += '<g class="rotor">';
     for (let ring = 0; ring < 3; ring++) for (let i = 0; i < 24; i++) {
       body += `<path d="${arc(776, 74, 56 - ring * 12, i * 15 + 2, i * 15 + 12)}" fill="none" stroke="${[project.accent, C.green, C.ink][(i + ring) % 3]}" stroke-width="${ring === 0 ? 5 : 3}"/>`;
     }
+    body += '</g>';
     body += circle(776, 74, 16, 'none', `stroke="${C.green}"`);
     body += line(771, 74, 781, 74, project.accent) + line(776, 69, 776, 79, project.accent);
   } else if (index === 1) {
     // Abstract interleaved waves; decorative, not a claim about project features.
-    for (let i = 0; i < 14; i++) body += `<path d="M 655 ${35 + i * 5} C 724 ${-20 + i * 10}, 811 ${168 - i * 10}, 893 ${45 + i * 4}" fill="none" stroke="${project.accent}" stroke-width="1" opacity="${.2 + i * .045}"/>`;
+    for (let i = 0; i < 14; i++) body += `<path class="flow" style="animation-delay: -${i * .25}s" d="M 655 ${35 + i * 5} C 724 ${-20 + i * 10}, 811 ${168 - i * 10}, 893 ${45 + i * 4}" fill="none" stroke="${project.accent}" stroke-width="1" opacity="${.2 + i * .045}"/>`;
   } else {
+    body += '<g class="rotor reverse">';
     for (let i = 0; i < 4; i++) body += `<ellipse cx="776" cy="74" rx="${64 - i * 8}" ry="${38 + i * 6}" transform="rotate(${i * 30} 776 74)" fill="none" stroke="${project.accent}" opacity="${.3 + i * .15}"/>`;
+    body += '</g>';
     body += circle(776, 74, 4, project.accent) + circle(839, 74, 3, C.ink);
   }
   await writeFile(new URL(`${project.file}.svg`, out), svg(148, project.name, `${project.name}. Decorative project artwork; descriptions and links are in the README.`, body));
@@ -126,4 +141,10 @@ for (const [i, [eyebrow, title, first, second]] of researchRows.entries()) {
   compactResearch += circle(371, y + 29, 4, C.mint) + circle(371, y + 29, 10, 'none', `stroke="${C.green}"`);
 }
 await writeFile(new URL('research-mobile.svg', out), svg(426, 'Research directions', 'Graph learning, drug-combination prediction, mathematical modelling, and reproducible workflows.', compactResearch, 420));
-console.log('Built banner, three project covers, and research artwork.');
+// SVG image documents do not consistently inherit reduced-motion media queries.
+// Native picture sources select these still versions in the README instead.
+for (const name of ['banner', 'banner-mobile', 'genocular', 'gememiom', 'myocircbase']) {
+  const animated = await readFile(new URL(`${name}.svg`, out), 'utf8');
+  await writeFile(new URL(`${name}-still.svg`, out), animated.replace(/<style>[\s\S]*?<\/style>/, ''));
+}
+console.log('Built animated artwork, mobile variants, and reduced-motion alternatives.');

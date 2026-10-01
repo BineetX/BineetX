@@ -29,15 +29,15 @@ export async function fetchRepositories(owner, request = fetch) {
 }
 
 export function renderActivity(data, date, mobile = false) {
-  const colors = ['#B5E8C3', '#85AEA4', '#D1C8A7', '#80908A', '#567465'];
-  const t = (x, y, value, size = 14, color = '#A9B6AE', attrs = '') => `<text x="${x}" y="${y}" fill="${color}" font-family="Arial, Helvetica, sans-serif" font-size="${size}" ${attrs}>${escapeXML(value)}</text>`;
-  let body = t(32, 34, 'PUBLIC / REPOSITORY SNAPSHOT', 12, '#B5E8C3', 'letter-spacing="2"');
-  body += t(968, 34, `UPDATED ${date}`, 11, '#A9B6AE', 'text-anchor="end" letter-spacing="1"');
-  body += '<path d="M32 53 H968 M270 76 V232 M630 76 V232" fill="none" stroke="#2A3632"/>';
-  body += t(32, 126, data.count, 62, '#F2F0E7', 'font-weight="600" letter-spacing="-3"');
-  body += t(34, 155, 'Public repositories', 16, '#F2F0E7');
+  const colors = ['#7DD3FC', '#A5B4FC', '#5EEAD4', '#8095B0', '#487891'];
+  const t = (x, y, value, size = 14, color = '#A7B6CA', attrs = '') => `<text x="${x}" y="${y}" fill="${color}" font-family="Arial, Helvetica, sans-serif" font-size="${size}" ${attrs}>${escapeXML(value)}</text>`;
+  let body = t(32, 34, 'PUBLIC / REPOSITORY SNAPSHOT', 12, '#7DD3FC', 'letter-spacing="2"');
+  body += t(968, 34, `UPDATED ${date}`, 11, '#A7B6CA', 'text-anchor="end" letter-spacing="1"');
+  body += '<path d="M32 53 H968 M270 76 V232 M630 76 V232" fill="none" stroke="#253347"/>';
+  body += t(32, 126, data.count, 62, '#F0F6FC', 'font-weight="600" letter-spacing="-3"');
+  body += t(34, 155, 'Public repositories', 16, '#F0F6FC');
   body += t(34, 183, 'Excludes forks & profile', 12);
-  body += t(300, 91, 'PRIMARY LANGUAGES', 11, '#A9B6AE', 'letter-spacing="1.5"');
+  body += t(300, 91, 'PRIMARY LANGUAGES', 11, '#A7B6CA', 'letter-spacing="1.5"');
   // Counts are repositories, not code bytes or a claim about proficiency.
   const total = data.languages.reduce((sum, [, count]) => sum + count, 0);
   const visible = data.languages.slice(0, 4);
@@ -53,43 +53,43 @@ export function renderActivity(data, date, mobile = false) {
     const y = 145 + i * 20;
     body += `<circle cx="304" cy="${y - 4}" r="3" fill="${colors[i]}"/>`;
     body += t(316, y, language.length > 26 ? `${language.slice(0, 25)}…` : language, 13);
-    body += t(595, y, count, 13, '#F2F0E7', 'text-anchor="end"');
+    body += t(595, y, count, 13, '#F0F6FC', 'text-anchor="end"');
   }
-  body += t(660, 91, 'RECENT PUSHES', 11, '#A9B6AE', 'letter-spacing="1.5"');
+  body += t(660, 91, 'RECENT PUSHES', 11, '#A7B6CA', 'letter-spacing="1.5"');
   if (!data.recent.length) body += t(660, 139, 'No public pushes available', 14);
   for (const [i, repo] of data.recent.entries()) {
     const name = repo.name.length > 22 ? `${repo.name.slice(0, 21)}…` : repo.name;
     const y = 131 + i * 40;
-    body += t(660, y, name, 15, '#F2F0E7');
-    body += t(968, y, repo.pushed_at.slice(0, 10), 11, '#A9B6AE', 'text-anchor="end"');
+    body += t(660, y, name, 15, '#F0F6FC');
+    body += t(968, y, repo.pushed_at.slice(0, 10), 11, '#A7B6CA', 'text-anchor="end"');
   }
   if (mobile) {
-    body = t(24, 29, 'PUBLIC / REPOSITORY SNAPSHOT', 11, '#B5E8C3', 'letter-spacing="1"');
+    body = t(24, 29, 'PUBLIC / REPOSITORY SNAPSHOT', 11, '#7DD3FC', 'letter-spacing="1"');
     body += t(24, 52, `UPDATED ${date}`, 11);
-    body += t(22, 116, data.count, 56, '#F2F0E7', 'font-weight="600"');
-    body += t(90, 95, 'Public repositories', 18, '#F2F0E7');
+    body += t(22, 116, data.count, 56, '#F0F6FC', 'font-weight="600"');
+    body += t(90, 95, 'Public repositories', 18, '#F0F6FC');
     body += t(90, 118, 'Excludes forks & profile', 12);
-    body += '<path d="M24 140 H396 M24 315 H396" stroke="#2A3632"/>';
-    body += t(24, 168, 'PRIMARY LANGUAGES', 12, '#A9B6AE', 'letter-spacing="1"');
+    body += '<path d="M24 140 H396 M24 315 H396" stroke="#253347"/>';
+    body += t(24, 168, 'PRIMARY LANGUAGES', 12, '#A7B6CA', 'letter-spacing="1"');
     if (!total) body += t(24, 200, 'No language data available');
     for (const [i, [language, count]] of visible.entries()) {
       const y = 197 + i * 23;
-      body += t(24, y, language.length > 22 ? `${language.slice(0, 21)}…` : language, 14, '#F2F0E7');
+      body += t(24, y, language.length > 22 ? `${language.slice(0, 21)}…` : language, 14, '#F0F6FC');
       body += `<rect x="240" y="${y - 9}" width="${count / total * 116}" height="7" rx="2" fill="${colors[i]}"/>`;
-      body += t(396, y, count, 14, '#F2F0E7', 'text-anchor="end"');
+      body += t(396, y, count, 14, '#F0F6FC', 'text-anchor="end"');
     }
-    body += t(24, 345, 'RECENT PUSHES', 12, '#A9B6AE', 'letter-spacing="1"');
+    body += t(24, 345, 'RECENT PUSHES', 12, '#A7B6CA', 'letter-spacing="1"');
     if (!data.recent.length) body += t(24, 378, 'No public pushes available');
     for (const [i, repo] of data.recent.entries()) {
-      body += t(24, 378 + i * 33, repo.name.length > 23 ? `${repo.name.slice(0, 22)}…` : repo.name, 15, '#F2F0E7');
-      body += t(396, 378 + i * 33, repo.pushed_at.slice(0, 10), 12, '#A9B6AE', 'text-anchor="end"');
+      body += t(24, 378 + i * 33, repo.name.length > 23 ? `${repo.name.slice(0, 22)}…` : repo.name, 15, '#F0F6FC');
+      body += t(396, 378 + i * 33, repo.pushed_at.slice(0, 10), 12, '#A7B6CA', 'text-anchor="end"');
     }
   }
   const width = mobile ? 420 : 1000, height = mobile ? 472 : 255;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">
 <title id="title">Public repository activity</title>
 <desc id="desc">Snapshot dated ${escapeXML(date)}. ${data.count} public, non-fork repositories excluding the profile. Primary language counts by repository: ${escapeXML(data.languages.map(([name, count]) => `${name}: ${count}`).join(', ') || 'none')}. Recent repository pushes: ${escapeXML(data.recent.map(repo => `${repo.name}, ${repo.pushed_at.slice(0, 10)}`).join('; ') || 'none')}. Push dates are not necessarily commit dates.</desc>
-<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="6" fill="#101615" stroke="#2A3632"/>
+<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="6" fill="#0D1117" stroke="#253347"/>
 ${body}
 </svg>\n`;
 }

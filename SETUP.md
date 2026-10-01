@@ -29,6 +29,28 @@ Use the cover in place of the heading: `[![Project name](assets/name.svg)](URL)`
 The artwork generator never edits the README or your project descriptions.
 GENOCULAR, GemeMiom, and MyoCircBase use the URLs supplied by the profile owner.
 
+## Motion and interaction
+
+The original [Readme Typing SVG](https://github.com/DenverCoder1/readme-typing-svg)
+integration is restored beneath the header. Change `lines=` in both image URLs
+in `README.md` to edit its phrases; separate phrases with semicolons and encode
+spaces as `+`. The text types and deletes on a loop without a workflow run.
+Light and dark themes use different text colors for contrast.
+
+The header's network rotates slowly. Each project cover has its own animated
+motif. These are local SVG animations, so no external runtime or JavaScript is
+needed for the artwork. They respect the viewer's reduced-motion preference.
+The remotely hosted typing animation and snake retain their upstream behavior.
+
+Project covers and launch/source links open the supplied destinations. Native
+`details` controls expand the real GENOCULAR and GemeMiom screenshots, the full
+toolkit, and the repository snapshot. Keep `assets/project_screenshots/` with the
+README when publishing. The contribution animation is visible by default.
+
+The typing line and [Skill Icons](https://github.com/tandpfun/skill-icons) are
+hosted integrations and require those services to be available. The daily
+repository snapshot and contribution-generation workflow are preserved.
+
 ## Automatic refresh
 
 Commit the README, assets, scripts, and `.github/workflows` to the default branch
@@ -64,7 +86,8 @@ repositories and show GitHub's `pushed_at` date, which is not a commit count.
 The displayed refresh date uses `Asia/Kolkata`.
 
 A failed API request fails the refresh and leaves the checked-in panel intact.
-Project illustrations are decorative, not screenshots or experimental results.
+Project cover illustrations are decorative, not experimental results. The
+expandable interface previews use the screenshots in `assets/project_screenshots/`.
 
 ## Optional Metrics plugins
 
@@ -107,6 +130,7 @@ The last command needs access to `api.github.com`. `PROFILE_USER` defaults to
 `BineetX`; `GITHUB_TOKEN` is optional locally and raises the API rate limit.
 Action revisions are pinned in the workflows; update them deliberately.
 
-The visual system uses charcoal `#101615`, ivory `#F2F0E7`, and mint `#B5E8C3`.
-All major images have accessible descriptions and local paths. Keep the diagrams
-simple and the descriptive copy in Markdown when extending the portfolio.
+The visual system uses GitHub charcoal `#0D1117`, white `#F0F6FC`, and cyan
+`#7DD3FC`, with per-project indigo and teal accents. Local artwork has accessible
+descriptions and mobile variants. Keep project descriptions in Markdown when
+extending the portfolio.
