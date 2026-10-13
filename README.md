@@ -1,8 +1,8 @@
 <picture>
-  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/banner-mobile-still.svg" />
-  <source media="(max-width: 600px)" srcset="assets/banner-mobile.svg" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/banner-still.svg" />
-  <img src="assets/banner.svg" alt="Bineet Kumar Mohanta — computational biology, bioinformatics, and scientific software" width="100%" />
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-mobile-still.svg" />
+  <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-mobile.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-still.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner.svg" alt="Bineet Kumar Mohanta — computational biology, bioinformatics, and scientific software" width="100%" />
 </picture>
 
 **Senior Research Fellow (Ph.D.) · Computational Biology & Bioinformatics Lab**\
@@ -16,15 +16,15 @@ BRIC-Institute of Life Sciences, Bhubaneswar
 
 <a href="https://genocular.dixitlab.org">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/genocular-still.svg" />
-    <img src="assets/genocular.svg" alt="GENOCULAR" width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-still.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular.svg" alt="GENOCULAR" width="100%" />
   </picture>
 </a>
 
 Whole-genome sequencing and metagenomics workflows for short, long, and hybrid reads.
 
 <a href="assets/project_screenshots/genocular.png">
-  <img src="assets/project_screenshots/genocular.png" alt="GENOCULAR interface showing WGS and metagenomics analysis, short/long/hybrid read modes, and the pipeline from sequencing reads to genome visualization. Select to view the full-size screenshot." width="100%" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/project_screenshots/genocular.png" alt="GENOCULAR interface showing WGS and metagenomics analysis, short/long/hybrid read modes, and the pipeline from sequencing reads to genome visualization. Select to view the full-size screenshot." width="100%" />
 </a>
 
 [Website ↗](https://genocular.dixitlab.org) &nbsp; · &nbsp; [Source ↗](https://github.com/BineetX/GENOCULAR)
@@ -35,15 +35,15 @@ Whole-genome sequencing and metagenomics workflows for short, long, and hybrid r
 
 <a href="https://www.gememiom.org">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/gememiom-still.svg" />
-    <img src="assets/gememiom.svg" alt="GeMemiOM" width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-still.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom.svg" alt="GeMemiOM" width="100%" />
   </picture>
 </a>
 
 Otitis-media-associated genes, methylation study targets, and microRNA interactions.
 
 <a href="assets/project_screenshots/gememiom.png">
-  <img src="assets/project_screenshots/gememiom.png" alt="GeMemiOM interface showing otitis-media gene selection, CpG-island and transcription-factor binding information, functional enrichment, and biological interaction tools. Select to view the full-size screenshot." width="100%" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/project_screenshots/gememiom.png" alt="GeMemiOM interface showing otitis-media gene selection, CpG-island and transcription-factor binding information, functional enrichment, and biological interaction tools. Select to view the full-size screenshot." width="100%" />
 </a>
 
 [Website ↗](https://www.gememiom.org) &nbsp; · &nbsp; [Publication ↗](https://doi.org/10.1016/j.jgg.2023.07.010)
@@ -54,8 +54,8 @@ Otitis-media-associated genes, methylation study targets, and microRNA interacti
 
 <a href="https://github.com/BineetX/MyoCIRCBase">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/myocircbase-still.svg" />
-    <img src="assets/myocircbase.svg" alt="MyoCircBase" width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-still.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase.svg" alt="MyoCircBase" width="100%" />
   </picture>
 </a>
 
@@ -73,8 +73,8 @@ Otitis-media-associated genes, methylation study targets, and microRNA interacti
 Heterogeneous graph neural networks for drug synergy prediction.
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/research-mobile.svg" />
-  <img src="assets/research.svg" alt="Research interests: graph neural networks and biological knowledge graphs; drug-combination prediction and multimodal learning; mathematical modelling and reproducible bioinformatics. Illustrative diagrams, not research results." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-mobile.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research.svg" alt="Research interests: graph neural networks and biological knowledge graphs; drug-combination prediction and multimodal learning; mathematical modelling and reproducible bioinformatics. Illustrative diagrams, not research results." width="100%" />
 </picture>
 
 <a id="toolkit"></a>
@@ -82,10 +82,10 @@ Heterogeneous graph neural networks for drug synergy prediction.
 ### Skills
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/skills-mobile-still.svg" />
-  <source media="(max-width: 600px)" srcset="assets/skills-mobile.svg" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/skills-still.svg" />
-  <img src="assets/skills.svg" width="100%" alt="Python, R, Rust, Perl, Java, JavaScript, TypeScript, HTML, React, PyTorch, PyTorch Geometric, DGL, Scikit-learn, FastAPI, Snakemake, Linux, Slurm, PostgreSQL, MinIO, Redis, Nginx, Keycloak, AWS, Firebase, Docker, Git, GitHub, LaTeX, Illustrator, InDesign, Photoshop, After Effects, Audition, Premiere Pro" />
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills-mobile-still.svg" />
+  <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills-mobile.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills-still.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills.svg" width="100%" alt="Python, R, Rust, Perl, Java, JavaScript, TypeScript, HTML, React, PyTorch, PyTorch Geometric, DGL, Scikit-learn, FastAPI, Snakemake, Linux, Slurm, PostgreSQL, MinIO, Redis, Nginx, Keycloak, AWS, Firebase, Docker, Git, GitHub, LaTeX, Illustrator, InDesign, Photoshop, After Effects, Audition, Premiere Pro" />
 </picture>
 
 <details>
@@ -107,8 +107,8 @@ Heterogeneous graph neural networks for drug synergy prediction.
 ### Activity
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/github-snake-dark.svg" />
-  <img src="assets/github-snake.svg" alt="Animated snake following BineetX's GitHub contribution calendar, refreshed daily" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/github-snake-dark.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/github-snake.svg" alt="Animated snake following BineetX's GitHub contribution calendar, refreshed daily" width="100%" />
 </picture>
 
 <details>
@@ -116,8 +116,8 @@ Heterogeneous graph neural networks for drug synergy prediction.
 
 <a href="https://github.com/BineetX?tab=repositories">
   <picture>
-    <source media="(max-width: 600px)" srcset="assets/activity-mobile.svg" />
-    <img src="assets/activity.svg" alt="Public repository activity, refreshed daily by GitHub Actions. Counts exclude forks and the profile repository; language counts use each repository's primary language." width="100%" />
+    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/activity-mobile.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/activity.svg" alt="Public repository activity, refreshed daily by GitHub Actions. Counts exclude forks and the profile repository; language counts use each repository's primary language." width="100%" />
   </picture>
 </a>
 

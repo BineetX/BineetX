@@ -81,6 +81,21 @@ The contribution animation is visible by default.
 
 The daily repository snapshot and contribution-generation workflow are preserved.
 
+## GitHub image delivery
+
+README image `src` and `srcset` URLs use
+`https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/`. GitHub proxies these
+external images through Camo. Relative image URLs redirect visitors directly
+to `raw.githubusercontent.com`, which timed out during live-profile checks
+even though the README and Actions runs loaded successfully.
+
+Keep artwork checked into `assets/` and use the same CDN prefix for new images,
+including mobile and reduced-motion sources. Screenshot destination links can
+remain relative. The CDN follows the public `main` branch; caches may delay
+new artwork appearing. Local artwork generation still works offline. An HTML
+preview with local image URLs alone does not verify GitHub delivery: check the
+public image responses and GitHub-rendered image URLs too.
+
 ## Automatic refresh
 
 Commit the README, assets, scripts, and `.github/workflows` to the default branch
