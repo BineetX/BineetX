@@ -1,12 +1,14 @@
 # Maintaining this profile
 
 The README is a Markdown portfolio with repository-owned SVG artwork. Project
-names appear on compact covers; descriptions and links stay in `README.md`.
+names appear on compact covers, followed by visible interface screenshots;
+descriptions and links stay in `README.md`.
 
 ## Edit or add projects
 
-Edit the project descriptions directly in `README.md`. The comments below
-GemeMiom and MyoCircBase mark where to add their descriptions. End a description line with a backslash if you want the links on the next line.
+Edit the project descriptions directly in `README.md`. The comment below
+MyoCircBase marks where to add its description. End a description line with a
+backslash if you want the links on the next line.
 
 To add another project, insert this before the research section:
 
@@ -27,7 +29,23 @@ node scripts/build-artwork.mjs
 
 Use the cover in place of the heading: `[![Project name](assets/name.svg)](URL)`.
 The artwork generator never edits the README or your project descriptions.
-GENOCULAR, GemeMiom, and MyoCircBase use the URLs supplied by the profile owner.
+GENOCULAR, GeMemiOM, and MyoCircBase use the URLs supplied by the profile owner.
+
+Keep the original PNGs in `assets/project_screenshots/`. The README displays
+GENOCULAR and GeMemiOM at full width outside disclosures; selecting a screenshot
+opens the original image. Each project also has explicit launch and full-size
+preview links, an anchor for quick navigation, and expandable feature details.
+When adding a screenshot, use descriptive alt text and preserve its aspect ratio.
+
+## Specialization and skills
+
+The specialization, research summary, and skill groups are adapted from
+[bineet.dev](https://bineet.dev), consulted on 13 October 2026. The site's
+specialization is mathematical modelling, programming, and machine learning;
+its current research focus is heterogeneous GNNs for drug synergy prediction.
+The README groups the published skills and normalizes spelling, without copying
+the site's proficiency percentages. Review the live portfolio before updating
+these details. This content is maintained manually, not by the daily workflow.
 
 ## Motion and interaction
 
@@ -43,9 +61,12 @@ needed for the artwork. They respect the viewer's reduced-motion preference.
 The remotely hosted typing animation and snake retain their upstream behavior.
 
 Project covers and launch/source links open the supplied destinations. Native
-`details` controls expand the real GENOCULAR and GemeMiom screenshots, the full
-toolkit, and the repository snapshot. Keep `assets/project_screenshots/` with the
-README when publishing. The contribution animation is visible by default.
+`details` controls expand project walkthroughs, additional scientific workflow
+and communication skills, and the repository snapshot. Screenshots and the core
+skills table remain visible by default. Keep `assets/project_screenshots/` with
+the README when publishing. GitHub README interaction uses links, anchors, and
+disclosures; custom JavaScript galleries and hover controls are not supported.
+The contribution animation is visible by default.
 
 The typing line and [Skill Icons](https://github.com/tandpfun/skill-icons) are
 hosted integrations and require those services to be available. The daily
@@ -87,7 +108,7 @@ The displayed refresh date uses `Asia/Kolkata`.
 
 A failed API request fails the refresh and leaves the checked-in panel intact.
 Project cover illustrations are decorative, not experimental results. The
-expandable interface previews use the screenshots in `assets/project_screenshots/`.
+visible interface previews use the screenshots in `assets/project_screenshots/`.
 
 ## Optional Metrics plugins
 

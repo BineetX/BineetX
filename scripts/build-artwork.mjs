@@ -78,7 +78,7 @@ function arc(cx, cy, r, start, end) {
 // Project names live in artwork; descriptions and links remain editable Markdown.
 const projects = [
   { name: 'GENOCULAR', file: 'genocular', accent: C.mint },
-  { name: 'GemeMiom', file: 'gememiom', accent: '#A5B4FC' },
+  { name: 'GeMemiOM', file: 'gememiom', accent: '#A5B4FC' },
   { name: 'MyoCircBase', file: 'myocircbase', accent: '#5EEAD4' },
 ];
 for (const [index, project] of projects.entries()) {
