@@ -33,8 +33,9 @@ GENOCULAR, GeMemiOM, and MyoCircBase use the URLs supplied by the profile owner.
 
 Keep the original PNGs in `assets/project_screenshots/`. The README displays
 GENOCULAR and GeMemiOM at full width outside disclosures; selecting a screenshot
-opens the original image. Each project also has explicit launch and full-size
-preview links, an anchor for quick navigation, and expandable feature details.
+opens the original image. Each project has short destination links and a stable
+anchor. Keep descriptions factual and brief; avoid slogans and instructions
+that repeat what the links and images already communicate.
 When adding a screenshot, use descriptive alt text and preserve its aspect ratio.
 
 ## Specialization and skills
@@ -46,11 +47,15 @@ its current research focus is heterogeneous GNNs for drug synergy prediction.
 The README groups the published skills and normalizes spelling, without copying
 the site's proficiency percentages. Review the live portfolio before updating
 these details. This content is maintained manually, not by the daily workflow.
+Nginx, PostgreSQL, MinIO, Redis, Keycloak, AWS, and Firebase expertise was
+confirmed by the profile owner. Cloud services and data storage have separate
+rows in the expandable toolkit. The opening specialization table and repeated
+research descriptions were consolidated into the research section and toolkit.
 
 ## Motion and interaction
 
 The skills panel has two seamless, right-to-left logo rows with soft edge fades.
-All 28 logos are embedded in the generated SVGs, so there is no icon-service
+All 34 logos are embedded in the generated SVGs, so there is no icon-service
 request at viewing time. Edit `scripts/build-skills.mjs` to update the selection;
 `node scripts/build-artwork.mjs` rebuilds everything offline. Original logos and
 their source URLs are in `assets/skill-logos/`, alongside the Skill Icons license.
@@ -68,8 +73,7 @@ has been removed to let the artwork carry the motion. Soft ambient lighting,
 rounded frames, and fine top-edge highlights tie the local panels together.
 
 Project covers and launch/source links open the supplied destinations. Native
-`details` controls expand project walkthroughs, additional scientific workflow
-and communication skills, and the repository snapshot. Screenshots and the logo
+`details` controls expand the skills table and repository snapshot. Screenshots and the logo
 strip remain visible; the detailed skills table expands on demand. Keep `assets/project_screenshots/` with
 the README when publishing. GitHub README interaction uses links, anchors, and
 disclosures; custom JavaScript galleries and hover controls are not supported.
@@ -157,6 +161,6 @@ The last command needs access to `api.github.com`. `PROFILE_USER` defaults to
 Action revisions are pinned in the workflows; update them deliberately.
 
 The visual system uses GitHub charcoal `#0D1117`, white `#F0F6FC`, and cyan
-`#7DD3FC`, with per-project indigo and teal accents. Local artwork has accessible
+`#7DD3FC`, shared across all project covers. Local artwork has accessible
 descriptions and mobile variants. Keep project descriptions in Markdown when
 extending the portfolio.

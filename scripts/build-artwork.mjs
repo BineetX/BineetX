@@ -51,11 +51,10 @@ for (let i = 0; i < nodes.length; i++) {
 }
 for (const n of [...nodes].sort((a, b) => a.z - b.z)) globe += circle(n.px, n.py, n.z > .6 ? 2.3 : 1.3, C.mint, `opacity="${(.24 + (n.z + 1) * .35).toFixed(2)}"`);
 let banner = '<ellipse cx="799" cy="181" rx="198" ry="166" fill="url(#ambient)"/>';
-banner += label(42, 40, 'BINEETX     /     RESEARCH &amp; ENGINEERING', C.mint);
+banner += label(42, 40, 'BINEETX', C.mint);
 banner += line(42, 60, 958, 60);
 banner += text(40, 139, 'Bineet Kumar', 54, C.ink, 'font-weight="600" letter-spacing="-2"');
 banner += text(37, 218, 'Mohanta', 86, C.ink, 'font-weight="700" letter-spacing="-4"');
-banner += text(42, 260, 'Biology, through a computational lens.', 18, C.dim);
 banner += `<ellipse cx="799" cy="181" rx="154" ry="53" transform="rotate(-28 799 181)" fill="none" stroke="${C.green}" stroke-width=".8"/><g class="globe">${globe}</g>`;
 banner += circle(937, 113, 4, C.mint, 'class="signal"') + circle(937, 113, 9, 'none', `stroke="${C.mint}" opacity=".35"`);
 banner += line(42, 296, 958, 296);
@@ -63,12 +62,11 @@ banner += label(42, 326, 'COMPUTATIONAL BIOLOGY');
 banner += label(379, 326, 'BIOINFORMATICS');
 banner += label(715, 326, 'SCIENTIFIC SOFTWARE');
 await writeFile(new URL('banner.svg', out), svg(350, 'Bineet Kumar Mohanta', 'Computational biology, bioinformatics, and scientific software. A decorative geometric network sphere accompanies the name.', banner));
-let compactBanner = label(24, 30, 'BINEETX / RESEARCH &amp; ENGINEERING', C.mint);
+let compactBanner = label(24, 30, 'BINEETX', C.mint);
 compactBanner += line(24, 46, 396, 46);
 compactBanner += text(23, 98, 'Bineet Kumar', 34, C.ink, 'font-weight="600" letter-spacing="-1"');
 compactBanner += text(21, 157, 'Mohanta', 62, C.ink, 'font-weight="700" letter-spacing="-3"');
 compactBanner += `<g transform="translate(104 56) scale(.32)"><g class="globe">${globe}</g></g>`;
-compactBanner += text(24, 192, 'Biology, through a computational lens.', 14);
 compactBanner += line(24, 213, 396, 213);
 compactBanner += text(24, 239, 'Computational biology · Bioinformatics', 13, C.mint);
 compactBanner += text(24, 260, 'Scientific software', 13);
@@ -82,12 +80,12 @@ function arc(cx, cy, r, start, end) {
 // Project names live in artwork; descriptions and links remain editable Markdown.
 const projects = [
   { name: 'GENOCULAR', file: 'genocular', accent: C.mint },
-  { name: 'GeMemiOM', file: 'gememiom', accent: '#A5B4FC' },
-  { name: 'MyoCircBase', file: 'myocircbase', accent: '#5EEAD4' },
+  { name: 'GeMemiOM', file: 'gememiom', accent: C.mint },
+  { name: 'MyoCircBase', file: 'myocircbase', accent: C.mint },
 ];
 for (const [index, project] of projects.entries()) {
   let body = '<ellipse cx="776" cy="74" rx="158" ry="72" fill="url(#ambient)"/>';
-  body += label(36, 36, `PROJECT / 0${index + 1}`, project.accent);
+  body += label(36, 36, `0${index + 1}`, project.accent);
   body += text(33, 104, project.name, 51, C.ink, 'font-weight="600" letter-spacing="-1.5"');
   body += line(595, 24, 595, 124);
   body += `<path d="M 936 40 H 954 V 58 M 935 59 L 954 40" fill="none" stroke="${project.accent}" stroke-width="1.5"/>`;
@@ -111,41 +109,30 @@ for (const [index, project] of projects.entries()) {
   await writeFile(new URL(`${project.file}.svg`, out), svg(148, project.name, `${project.name}. Decorative project artwork; descriptions and links are in the README.`, body));
 }
 
-let research = line(333, 28, 333, 231) + line(666, 28, 666, 231);
+let research = line(333, 28, 333, 182) + line(666, 28, 666, 182);
 const graph = [[49,79],[97,44],[121,111],[174,67],[216,108],[261,51],[283,123]];
 for (const [i,j] of [[0,1],[0,2],[1,2],[1,3],[2,3],[2,4],[3,4],[3,5],[4,5],[4,6],[5,6]]) research += line(...graph[i], ...graph[j], C.green);
 for (const [i, p] of graph.entries()) research += circle(...p, i === 3 ? 7 : 4, i === 3 ? C.ink : C.mint);
-research += label(30, 166, '01 / REPRESENT');
-research += text(30, 198, 'Learning on graphs', 22, C.ink, 'font-weight="600"');
-research += text(30, 223, 'Neural networks · Biological knowledge', 14);
+research += text(30, 180, 'Graph learning', 22, C.ink, 'font-weight="600"');
 // Schematic interaction matrix: no numeric scale or invented experimental results.
 for (let row = 0; row < 5; row++) for (let col = 0; col < 8; col++) research += `<rect x="${376 + col * 30}" y="${32 + row * 20}" width="25" height="15" rx="2" fill="${C.mint}" opacity="${(.12 + ((row + col * 3) % 7) * .11).toFixed(2)}"/>`;
-research += label(363, 166, '02 / PREDICT');
-research += text(363, 198, 'Drug combinations', 22, C.ink, 'font-weight="600"');
-research += text(363, 223, 'Multimodal learning · Synergy prediction', 14);
+research += text(363, 180, 'Drug synergy', 22, C.ink, 'font-weight="600"');
 research += line(708, 130, 951, 130) + line(708, 130, 708, 31);
 research += `<path d="M 708 124 C 751 123 764 99 799 78 S 874 52 951 35" fill="none" stroke="${C.mint}" stroke-width="2"/>`;
 research += `<path d="M 708 124 C 755 124 781 123 816 102 S 894 84 951 43" fill="none" stroke="${C.green}" stroke-width="1.5" stroke-dasharray="4 5"/>`;
 research += circle(799, 78, 4) + circle(900, 47, 4);
-research += label(696, 166, '03 / UNDERSTAND');
-research += text(696, 198, 'Models &amp; workflows', 22, C.ink, 'font-weight="600"');
-research += text(696, 223, 'Mathematical modelling · Reproducibility', 14);
-await writeFile(new URL('research.svg', out), svg(255, 'Research directions', 'Illustrative research diagrams for graph learning, biological knowledge graphs, multimodal drug-combination prediction, mathematical modelling, and reproducible workflows. Not experimental results.', research));
+research += text(696, 180, 'Mathematical models', 22, C.ink, 'font-weight="600"');
+await writeFile(new URL('research.svg', out), svg(210, 'Research directions', 'Illustrative research diagrams for graph learning, biological knowledge graphs, multimodal drug-combination prediction, mathematical modelling, and reproducible workflows. Not experimental results.', research));
 let compactResearch = '';
-const researchRows = [
-  ['01 / REPRESENT', 'Learning on graphs', 'Neural networks', 'Biological knowledge graphs'],
-  ['02 / PREDICT', 'Drug combinations', 'Multimodal learning', 'Synergy prediction'],
-  ['03 / UNDERSTAND', 'Models &amp; workflows', 'Mathematical modelling', 'Reproducible bioinformatics'],
-];
-for (const [i, [eyebrow, title, first, second]] of researchRows.entries()) {
-  const y = i * 142;
+const researchDiagrams = research.replace(/<text\b[^>]*>[\s\S]*?<\/text>/g, '');
+const researchRows = ['Graph learning', 'Drug synergy', 'Mathematical models'];
+for (const [i, title] of researchRows.entries()) {
+  const y = i * 104;
   if (i) compactResearch += line(24, y, 396, y);
-  compactResearch += label(24, y + 29, eyebrow, C.mint);
-  compactResearch += text(24, y + 63, title, 24, C.ink, 'font-weight="600"');
-  compactResearch += text(24, y + 91, first, 15) + text(24, y + 113, second, 15);
-  compactResearch += circle(371, y + 29, 4, C.mint) + circle(371, y + 29, 10, 'none', `stroke="${C.green}"`);
+  compactResearch += `<svg x="18" y="${y + 16}" width="110" height="72" viewBox="${i * 333 + 20} 20 290 120" overflow="hidden" aria-hidden="true">${researchDiagrams}</svg>`;
+  compactResearch += text(148, y + 59, title, 20, C.ink, 'font-weight="600"');
 }
-await writeFile(new URL('research-mobile.svg', out), svg(426, 'Research directions', 'Graph learning, drug-combination prediction, mathematical modelling, and reproducible workflows.', compactResearch, 420));
+await writeFile(new URL('research-mobile.svg', out), svg(312, 'Research directions', 'Graph learning, drug-combination prediction, mathematical modelling, and reproducible workflows. Illustrative diagrams, not experimental results.', compactResearch, 420));
 // SVG image documents do not consistently inherit reduced-motion media queries.
 // Native picture sources select these still versions in the README instead.
 for (const name of ['banner', 'banner-mobile', 'genocular', 'gememiom', 'myocircbase']) {

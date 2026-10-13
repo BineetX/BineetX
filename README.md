@@ -8,25 +8,9 @@
 **Senior Research Fellow (Ph.D.) · Computational Biology & Bioinformatics Lab**\
 BRIC-Institute of Life Sciences, Bhubaneswar
 
-[Projects](#projects) &nbsp; · &nbsp; [Specialization](#specialization) &nbsp; · &nbsp; [Research](#research) &nbsp; · &nbsp; [Skills](#skills) &nbsp; · &nbsp; [Activity](#activity) &nbsp; · &nbsp; [Portfolio ↗](https://bineet.dev)
-
-### Specialization
-
-**Mathematical modelling · Programming · Machine learning**
-
-I build scientific software and computational workflows to study biological systems, with a current focus on heterogeneous graph neural networks for drug synergy prediction.
-
-| Focus | Methods & applications |
-| :--- | :--- |
-| **Mathematical modelling** | Metabolic networks, graph-based biological modelling, and molecular modelling |
-| **Programming** | Scientific tools, algorithm development, bioinformatics pipelines, and workflow automation |
-| **Machine learning** | Graph neural networks, heterogeneous biological networks, and drug synergy prediction |
+[Projects](#projects) &nbsp; · &nbsp; [Research](#research) &nbsp; · &nbsp; [Skills](#skills) &nbsp; · &nbsp; [Activity](#activity) &nbsp; · &nbsp; [Portfolio ↗](https://bineet.dev)
 
 ### Projects
-
-[GENOCULAR](#genocular) &nbsp; / &nbsp; [GeMemiOM](#gememiom) &nbsp; / &nbsp; [MyoCircBase](#myocircbase)
-
-Explore the interfaces below. Select a screenshot to view it at full size, or launch the live tool.
 
 <a id="genocular"></a>
 
@@ -37,24 +21,15 @@ Explore the interfaces below. Select a screenshot to view it at full size, or la
   </picture>
 </a>
 
-**Microbial genomics, from reads to results.** Whole-genome sequencing and metagenomics workflows for short-read, long-read, and hybrid sequencing data.
+Whole-genome sequencing and metagenomics workflows for short, long, and hybrid reads.
 
 <a href="assets/project_screenshots/genocular.png">
   <img src="assets/project_screenshots/genocular.png" alt="GENOCULAR interface showing WGS and metagenomics analysis, short/long/hybrid read modes, and the pipeline from sequencing reads to genome visualization. Select to view the full-size screenshot." width="100%" />
 </a>
 
-[**Launch GENOCULAR ↗**](https://genocular.dixitlab.org) &nbsp; · &nbsp; [Explore source ↗](https://github.com/BineetX/GENOCULAR) &nbsp; · &nbsp; [Full-size preview ↗](assets/project_screenshots/genocular.png)
+[Website ↗](https://genocular.dixitlab.org) &nbsp; · &nbsp; [Source ↗](https://github.com/BineetX/GENOCULAR)
 
-<details>
-<summary>Explore the workflow — reads, assembly, annotation &amp; visualization</summary>
-
-1. Choose whole-genome sequencing or metagenomics and a short, long, or hybrid read mode.
-2. Follow preprocessing, genome assembly, quality control, and annotation through a web interface.
-3. Explore the resulting genome with interactive visualization in the live tool.
-
-</details>
-
----
+<br />
 
 <a id="gememiom"></a>
 
@@ -65,24 +40,15 @@ Explore the interfaces below. Select a screenshot to view it at full size, or la
   </picture>
 </a>
 
-**Explore the molecular context of otitis media.** GeMemiOM brings together associated genes, putative methylation study targets, and microRNA targets with functional enrichment and interaction tools.
+Otitis-media-associated genes, methylation study targets, and microRNA interactions.
 
 <a href="assets/project_screenshots/gememiom.png">
   <img src="assets/project_screenshots/gememiom.png" alt="GeMemiOM interface showing otitis-media gene selection, CpG-island and transcription-factor binding information, functional enrichment, and biological interaction tools. Select to view the full-size screenshot." width="100%" />
 </a>
 
-[**Launch GeMemiOM ↗**](https://www.gememiom.org) &nbsp; · &nbsp; [Read the publication ↗](https://doi.org/10.1016/j.jgg.2023.07.010) &nbsp; · &nbsp; [Full-size preview ↗](assets/project_screenshots/gememiom.png)
+[Website ↗](https://www.gememiom.org) &nbsp; · &nbsp; [Publication ↗](https://doi.org/10.1016/j.jgg.2023.07.010)
 
-<details>
-<summary>Explore the database — genes, regulatory context &amp; interactions</summary>
-
-- Select an otitis-media-associated gene to explore CpG-island and transcription-factor binding information.
-- Browse functional enrichments, pathways, and protein, genetic, or co-expression interactions.
-- Explore microRNA and microRNA–lncRNA interactions through the live interface.
-
-</details>
-
----
+<br />
 
 <a id="myocircbase"></a>
 
@@ -94,15 +60,17 @@ Explore the interfaces below. Select a screenshot to view it at full size, or la
 </a>
 
 <!-- Add your MyoCircBase description here. -->
-[Explore MyoCircBase ↗](https://github.com/BineetX/MyoCIRCBase)
+[Source ↗](https://github.com/BineetX/MyoCIRCBase)
 
 <!-- Add future projects here using a Markdown heading, description, and links. -->
 
-[**Bioinformatica ↗**](https://github.com/BineetX/Bioinformatica) — A curated collection of bioinformatics tools, databases, books, pipelines, and tutorials.
+[Bioinformatica ↗](https://github.com/BineetX/Bioinformatica) — Bioinformatics tools, databases, and tutorials.
+
+<a id="specialization"></a>
 
 ### Research
 
-My current research develops heterogeneous graph neural networks for high-fidelity drug synergy prediction. Related interests include network biology, omics integration, cheminformatics, molecular docking, molecular dynamics, and QSAR.
+Heterogeneous graph neural networks for drug synergy prediction.
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/research-mobile.svg" />
@@ -117,36 +85,22 @@ My current research develops heterogeneous graph neural networks for high-fideli
   <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/skills-mobile-still.svg" />
   <source media="(max-width: 600px)" srcset="assets/skills-mobile.svg" />
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/skills-still.svg" />
-  <img src="assets/skills.svg" width="100%" alt="Python, R, Rust, Perl, Java, JavaScript, TypeScript, HTML, React, PyTorch, PyTorch Geometric, DGL, Scikit-learn, FastAPI, PostgreSQL, Snakemake, Docker, Linux, Slurm, Git, GitHub, LaTeX, Illustrator, InDesign, Photoshop, After Effects, Audition, Premiere Pro" />
+  <img src="assets/skills.svg" width="100%" alt="Python, R, Rust, Perl, Java, JavaScript, TypeScript, HTML, React, PyTorch, PyTorch Geometric, DGL, Scikit-learn, FastAPI, Snakemake, Linux, Slurm, PostgreSQL, MinIO, Redis, Nginx, Keycloak, AWS, Firebase, Docker, Git, GitHub, LaTeX, Illustrator, InDesign, Photoshop, After Effects, Audition, Premiere Pro" />
 </picture>
 
 <details>
-<summary>Explore the full toolkit</summary>
+<summary>Skills &amp; tools</summary>
 
 | Area | Skills |
 | :--- | :--- |
-| **Programming & interfaces** | Python · R · Rust · Perl · Java · JavaScript · TypeScript · HTML · React |
-| **Bioinformatics** | Network biology · Genome assembly & annotation · Bioinformatics pipelines · Metabolic network modelling · Omics data integration · Protein–protein interaction networks · Graph-based biological modelling · Database management & SQL |
-| **Computational biology** | Cheminformatics · Graph neural networks · Machine learning · Mathematical modelling · Algorithm development · Pipeline development |
-| **Frameworks & tools** | PyTorch · PyTorch Geometric · DGL · Scikit-learn · FastAPI · React · PostgreSQL |
-| **Workflows & infrastructure** | Snakemake · Docker · Linux · HPC · Slurm · Git · GitHub |
-
-</details>
-
-<details>
-<summary>Explore scientific workflows &amp; data systems</summary>
-
-- **Sequencing & expression analysis:** DESeq, edgeR, STAR, R, and Python.
-- **Molecular modelling:** molecular docking, molecular dynamics simulation, QSAR, and cheminformatics.
-- **Scientific data systems:** API design, search interfaces, scientific schemas, and PostgreSQL.
-- **Research computing:** reproducible workflows, GPU experimentation, and HPC / Slurm execution.
-
-</details>
-
-<details>
-<summary>Explore scientific communication &amp; design skills</summary>
-
-LaTeX · Adobe Illustrator · InDesign · Photoshop · After Effects · Audition · Premiere Pro
+| **Languages & interfaces** | Python · R · Rust · Perl · Java · JavaScript · TypeScript · HTML · React |
+| **Machine learning & APIs** | PyTorch · PyTorch Geometric · DGL · Scikit-learn · FastAPI |
+| **Cloud & services** | Nginx · Keycloak · AWS · Firebase |
+| **Data & storage** | PostgreSQL · SQL · MinIO · Redis |
+| **Workflows & computing** | Snakemake · Docker · Linux · HPC · Slurm · Git · GitHub |
+| **Bioinformatics** | Genome assembly & annotation · DESeq · edgeR · STAR · Omics integration · Network biology |
+| **Modelling** | Graph neural networks · Metabolic networks · Protein interactions · Mathematical modelling · Molecular docking & dynamics · QSAR · Cheminformatics |
+| **Design & writing** | LaTeX · Illustrator · InDesign · Photoshop · After Effects · Audition · Premiere Pro |
 
 </details>
 
@@ -158,7 +112,7 @@ LaTeX · Adobe Illustrator · InDesign · Photoshop · After Effects · Audition
 </picture>
 
 <details>
-<summary>Public repository snapshot · updated daily</summary>
+<summary>Repository activity</summary>
 
 <a href="https://github.com/BineetX?tab=repositories">
   <picture>
@@ -168,7 +122,3 @@ LaTeX · Adobe Illustrator · InDesign · Photoshop · After Effects · Audition
 </a>
 
 </details>
-
----
-
-**Bineet Kumar Mohanta** &nbsp; / &nbsp; Biology · Computation · Discovery

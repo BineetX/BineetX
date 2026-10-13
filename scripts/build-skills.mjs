@@ -7,8 +7,10 @@ const logos = [
   ['TypeScript', 'TypeScript.svg'], ['HTML', 'HTML.svg'], ['React', 'React-Dark.svg'],
   ['PyTorch', 'PyTorch-Dark.svg'], ['PyTorch Geometric', 'PyG.svg'], ['DGL', 'DGL-small.png'],
   ['Scikit-learn', 'ScikitLearn-Dark.svg'], ['FastAPI', 'FastAPI.svg'],
-  ['PostgreSQL', 'PostgreSQL-Dark.svg'], ['Snakemake', 'Snakemake.svg'],
-  ['Docker', 'Docker.svg'], ['Linux', 'Linux-Dark.svg'], ['Slurm', 'Slurm.png'],
+  ['Snakemake', 'Snakemake.svg'], ['Linux', 'Linux-Dark.svg'], ['Slurm', 'Slurm.png'],
+  ['PostgreSQL', 'PostgreSQL-Dark.svg'], ['MinIO', 'MinIO.svg'], ['Redis', 'Redis-Dark.svg'],
+  ['Nginx', 'Nginx.svg'], ['Keycloak', 'Keycloak.svg'], ['AWS', 'AWS-Dark.svg'],
+  ['Firebase', 'Firebase-Dark.svg'], ['Docker', 'Docker.svg'],
   ['Git', 'Git.svg'], ['GitHub', 'Github-Dark.svg'], ['LaTeX', 'LaTeX-Dark.svg'],
   ['Illustrator', 'Illustrator.svg'], ['InDesign', 'InDesign.svg'],
   ['Photoshop', 'Photoshop.svg'], ['After Effects', 'AfterEffects.svg'],
@@ -18,8 +20,10 @@ const assets = new URL('../assets/', import.meta.url);
 const images = await Promise.all(logos.map(async ([name, file]) => {
   let bytes = await readFile(new URL(`skill-logos/${file}`, assets));
   if (file === 'InDesign.svg') bytes = Buffer.from(bytes.toString().replace('<path ', '<path fill="#FF3366" '));
+  const color = { 'MinIO.svg': '#F04464', 'Keycloak.svg': '#7DD3FC' }[file];
+  if (color) bytes = Buffer.from(bytes.toString().replace('<path ', `<path fill="${color}" `));
   const type = file.endsWith('.svg') ? 'svg+xml' : file.endsWith('.png') ? 'png' : 'jpeg';
-  const plate = ['Slurm.png', 'DGL-small.png'].includes(file) ? '#F0F6FC' : ['PyG.svg', 'Snakemake.svg'].includes(file) ? '#242938' : null;
+  const plate = ['Slurm.png', 'DGL-small.png'].includes(file) ? '#F0F6FC' : ['PyG.svg', 'Snakemake.svg', 'MinIO.svg', 'Keycloak.svg'].includes(file) ? '#242938' : null;
   return { name, plate, uri: `data:image/${type};base64,${bytes.toString('base64')}` };
 }));
 
@@ -29,7 +33,8 @@ function render(mobile, still) {
   const columns = mobile ? 7 : 14;
   const height = still ? (Math.ceil(images.length / columns) * 72 + 24) : 172;
   const step = mobile ? 84 : 96;
-  const span = 14 * step;
+  const split = Math.ceil(images.length / 2);
+  const rows = [images.slice(0, split), images.slice(split)];
   const icon = (i, x, y, side = size) => {
     const { name, plate, uri } = images[i];
     const inset = plate ? side * .1 : 0;
@@ -42,9 +47,10 @@ function render(mobile, still) {
     body = images.map((_, i) => icon(i, 16 + (i % columns) * cell + (cell - side) / 2, 24 + Math.floor(i / columns) * 72, side)).join('');
   } else {
     for (let row = 0; row < 2; row++) {
-      const content = Array.from({ length: 14 }, (_, i) => icon(row * 14 + i, i * step + (step - size) / 2, 0)).join('');
+      const span = rows[row].length * step;
+      const content = rows[row].map((_, i) => icon(row * split + i, i * step + (step - size) / 2, 0)).join('');
       // Exactly one period separates duplicates, so the wrap has no jump or gap.
-      body += `<g transform="translate(0 ${25 + row * 72})"><g class="track row-${row}">${content}<g transform="translate(${span} 0)" aria-hidden="true">${content}</g></g></g>`;
+      body += `<g transform="translate(0 ${25 + row * 72})"><g class="track row-${row}" style="--distance:-${span}px;--duration:${span / (row ? 17 : 20)}s">${content}<g transform="translate(${span} 0)" aria-hidden="true">${content}</g></g></g>`;
     }
     body = `<g mask="url(#fade)">${body}</g>`;
   }
@@ -58,9 +64,8 @@ function render(mobile, still) {
   <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="0" width="${width}" height="${height}"><rect width="${width}" height="${height}" fill="url(#fade-gradient)"/></mask>
 </defs>
 ${still ? '' : `<style>
-  .track { animation: drift ${span / 20}s linear infinite; }
-  .row-1 { animation-duration: ${span / 17}s; }
-  @keyframes drift { to { transform: translateX(-${span}px); } }
+  .track { animation: drift var(--duration) linear infinite; }
+  @keyframes drift { to { transform: translateX(var(--distance)); } }
   @media (prefers-reduced-motion: reduce) { .track { animation: none; } }
 </style>`}
 <rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="16" fill="url(#surface)" stroke="#253347"/>
