@@ -1,5 +1,6 @@
 // Deterministic, dependency-free vector artwork. Run: node scripts/build-artwork.mjs
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import './build-skills.mjs';
 
 const out = new URL('../assets/', import.meta.url);
 await mkdir(out, { recursive: true });
@@ -22,7 +23,9 @@ function svg(height, title, desc, body, width = 1000) {
   @keyframes flow { to { stroke-dashoffset: -204; } }
   @media (prefers-reduced-motion: reduce) { .globe, .rotor, .signal, .flow { animation: none; } }
 </style>
-<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="6" fill="${C.bg}" stroke="${C.line}"/>
+<defs><radialGradient id="ambient"><stop stop-color="${C.mint}" stop-opacity=".09"/><stop offset="1" stop-color="${C.mint}" stop-opacity="0"/></radialGradient><linearGradient id="rim"><stop stop-color="${C.mint}" stop-opacity="0"/><stop offset=".5" stop-color="${C.mint}" stop-opacity=".4"/><stop offset="1" stop-color="${C.mint}" stop-opacity="0"/></linearGradient></defs>
+<rect x=".5" y=".5" width="${width - 1}" height="${height - 1}" rx="16" fill="${C.bg}" stroke="${C.line}"/>
+<path d="M 24 1 H ${width - 24}" stroke="url(#rim)"/>
 ${body}
 </svg>\n`;
 }
@@ -47,7 +50,8 @@ for (let i = 0; i < nodes.length; i++) {
   }
 }
 for (const n of [...nodes].sort((a, b) => a.z - b.z)) globe += circle(n.px, n.py, n.z > .6 ? 2.3 : 1.3, C.mint, `opacity="${(.24 + (n.z + 1) * .35).toFixed(2)}"`);
-let banner = label(42, 40, 'BINEETX     /     RESEARCH &amp; ENGINEERING', C.mint);
+let banner = '<ellipse cx="799" cy="181" rx="198" ry="166" fill="url(#ambient)"/>';
+banner += label(42, 40, 'BINEETX     /     RESEARCH &amp; ENGINEERING', C.mint);
 banner += line(42, 60, 958, 60);
 banner += text(40, 139, 'Bineet Kumar', 54, C.ink, 'font-weight="600" letter-spacing="-2"');
 banner += text(37, 218, 'Mohanta', 86, C.ink, 'font-weight="700" letter-spacing="-4"');
@@ -82,7 +86,8 @@ const projects = [
   { name: 'MyoCircBase', file: 'myocircbase', accent: '#5EEAD4' },
 ];
 for (const [index, project] of projects.entries()) {
-  let body = label(36, 36, `PROJECT / 0${index + 1}`, project.accent);
+  let body = '<ellipse cx="776" cy="74" rx="158" ry="72" fill="url(#ambient)"/>';
+  body += label(36, 36, `PROJECT / 0${index + 1}`, project.accent);
   body += text(33, 104, project.name, 51, C.ink, 'font-weight="600" letter-spacing="-1.5"');
   body += line(595, 24, 595, 124);
   body += `<path d="M 936 40 H 954 V 58 M 935 59 L 954 40" fill="none" stroke="${project.accent}" stroke-width="1.5"/>`;

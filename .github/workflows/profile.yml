@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - "scripts/**"
+      - "assets/skill-logos/**"
       - ".github/workflows/profile.yml"
 
 permissions:
@@ -50,6 +51,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/banner.svg assets/banner-mobile.svg assets/genocular.svg assets/gememiom.svg assets/myocircbase.svg assets/research.svg assets/research-mobile.svg assets/activity.svg assets/activity-mobile.svg assets/github-snake.svg assets/github-snake-dark.svg
           git add assets/banner-still.svg assets/banner-mobile-still.svg assets/genocular-still.svg assets/gememiom-still.svg assets/myocircbase-still.svg
+          git add assets/skills.svg assets/skills-mobile.svg assets/skills-still.svg assets/skills-mobile-still.svg
           if git diff --cached --quiet; then
             echo "Profile visuals are already current."
             exit 0

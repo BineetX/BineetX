@@ -49,28 +49,33 @@ these details. This content is maintained manually, not by the daily workflow.
 
 ## Motion and interaction
 
-The original [Readme Typing SVG](https://github.com/DenverCoder1/readme-typing-svg)
-integration is restored beneath the header. Change `lines=` in both image URLs
-in `README.md` to edit its phrases; separate phrases with semicolons and encode
-spaces as `+`. The text types and deletes on a loop without a workflow run.
-Light and dark themes use different text colors for contrast.
+The skills panel has two seamless, right-to-left logo rows with soft edge fades.
+All 28 logos are embedded in the generated SVGs, so there is no icon-service
+request at viewing time. Edit `scripts/build-skills.mjs` to update the selection;
+`node scripts/build-artwork.mjs` rebuilds everything offline. Original logos and
+their source URLs are in `assets/skill-logos/`, alongside the Skill Icons license.
+The mobile panel keeps icons legible instead of shrinking the desktop strip.
+Reduced-motion picture sources show every logo in a static grid.
+`DGL-small.png` is a 208-pixel-wide thumbnail of the original `DGL.jpg`;
+embedding the thumbnail keeps the generated strips small. Broad research
+methods and unbranded scientific packages remain in the written toolkit.
 
 The header's network rotates slowly. Each project cover has its own animated
 motif. These are local SVG animations, so no external runtime or JavaScript is
 needed for the artwork. They respect the viewer's reduced-motion preference.
-The remotely hosted typing animation and snake retain their upstream behavior.
+The contribution snake retains its upstream behavior. The rotating typing text
+has been removed to let the artwork carry the motion. Soft ambient lighting,
+rounded frames, and fine top-edge highlights tie the local panels together.
 
 Project covers and launch/source links open the supplied destinations. Native
 `details` controls expand project walkthroughs, additional scientific workflow
-and communication skills, and the repository snapshot. Screenshots and the core
-skills table remain visible by default. Keep `assets/project_screenshots/` with
+and communication skills, and the repository snapshot. Screenshots and the logo
+strip remain visible; the detailed skills table expands on demand. Keep `assets/project_screenshots/` with
 the README when publishing. GitHub README interaction uses links, anchors, and
 disclosures; custom JavaScript galleries and hover controls are not supported.
 The contribution animation is visible by default.
 
-The typing line and [Skill Icons](https://github.com/tandpfun/skill-icons) are
-hosted integrations and require those services to be available. The daily
-repository snapshot and contribution-generation workflow are preserved.
+The daily repository snapshot and contribution-generation workflow are preserved.
 
 ## Automatic refresh
 

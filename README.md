@@ -5,14 +5,6 @@
   <img src="assets/banner.svg" alt="Bineet Kumar Mohanta — computational biology, bioinformatics, and scientific software" width="100%" />
 </picture>
 
-<!-- Edit the lines= parameter to change the rotating typing text. -->
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=21&amp;duration=2800&amp;pause=1200&amp;color=7DD3FC&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=48&amp;lines=Graph+Learning+for+Biological+Discovery;Exploring+Biological+Knowledge+Graphs;Building+Scientific+Tools" />
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=21&amp;duration=2800&amp;pause=1200&amp;color=0369A1&amp;center=true&amp;vCenter=true&amp;width=700&amp;height=48&amp;lines=Graph+Learning+for+Biological+Discovery;Exploring+Biological+Knowledge+Graphs;Building+Scientific+Tools" width="700" alt="Graph Learning for Biological Discovery · Exploring Biological Knowledge Graphs · Building Scientific Tools" />
-  </picture>
-</p>
-
 **Senior Research Fellow (Ph.D.) · Computational Biology & Bioinformatics Lab**\
 BRIC-Institute of Life Sciences, Bhubaneswar
 
@@ -121,12 +113,15 @@ My current research develops heterogeneous graph neural networks for high-fideli
 
 ### Skills
 
-Skills and specialization adapted from [bineet.dev](https://bineet.dev).
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=python,r,pytorch,react,fastapi,docker,postgres,linux&amp;theme=dark&amp;perline=8" />
-  <img src="https://skillicons.dev/icons?i=python,r,pytorch,react,fastapi,docker,postgres,linux&amp;theme=light&amp;perline=8" width="480" alt="Python, R, PyTorch, React, FastAPI, Docker, PostgreSQL, Linux" />
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/skills-mobile-still.svg" />
+  <source media="(max-width: 600px)" srcset="assets/skills-mobile.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/skills-still.svg" />
+  <img src="assets/skills.svg" width="100%" alt="Python, R, Rust, Perl, Java, JavaScript, TypeScript, HTML, React, PyTorch, PyTorch Geometric, DGL, Scikit-learn, FastAPI, PostgreSQL, Snakemake, Docker, Linux, Slurm, Git, GitHub, LaTeX, Illustrator, InDesign, Photoshop, After Effects, Audition, Premiere Pro" />
 </picture>
+
+<details>
+<summary>Explore the full toolkit</summary>
 
 | Area | Skills |
 | :--- | :--- |
@@ -135,6 +130,8 @@ Skills and specialization adapted from [bineet.dev](https://bineet.dev).
 | **Computational biology** | Cheminformatics · Graph neural networks · Machine learning · Mathematical modelling · Algorithm development · Pipeline development |
 | **Frameworks & tools** | PyTorch · PyTorch Geometric · DGL · Scikit-learn · FastAPI · React · PostgreSQL |
 | **Workflows & infrastructure** | Snakemake · Docker · Linux · HPC · Slurm · Git · GitHub |
+
+</details>
 
 <details>
 <summary>Explore scientific workflows &amp; data systems</summary>
