@@ -73,9 +73,22 @@ Otitis-media-associated genes, methylation study targets, and microRNA interacti
 Heterogeneous graph neural networks for drug synergy prediction.
 
 <picture>
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-mobile-still.svg" />
   <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-mobile.svg" />
-  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research.svg" alt="Research interests: graph neural networks and biological knowledge graphs; drug-combination prediction and multimodal learning; mathematical modelling and reproducible bioinformatics. Illustrative diagrams, not research results." width="100%" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-still.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research.svg" alt="Research in motion: a graph constellation with travelling messages, an animated drug-combination matrix, and a mathematical response curve traced over time. Conceptual illustrations, not experimental results." width="100%" />
 </picture>
+
+[Still view ↗](https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-still.svg)
+
+<details>
+<summary>Explore the research</summary>
+
+- **Graph constellations:** heterogeneous graph neural networks connect different biological entities and pass information along their relationships.
+- **Drug synergy:** learning across drug combinations and biological context supports synergy prediction. The animated matrix illustrates this research direction without displaying measured scores.
+- **Mathematical models:** response curves illustrate how a system can evolve over time. These trajectories are schematic, not fitted experimental data.
+
+</details>
 
 <a id="toolkit"></a>
 

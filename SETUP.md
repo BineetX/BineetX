@@ -54,6 +54,20 @@ research descriptions were consolidated into the research section and toolkit.
 
 ## Motion and interaction
 
+The research panel uses a moving graph constellation with travelling edge
+signals, a pulsing drug-combination matrix with a scanning highlight, and a
+progressively drawn response curve with a moving tracer. All three are
+conceptual illustrations, not experimental measurements. Edit
+`scripts/build-research.mjs`; it is imported by `scripts/build-artwork.mjs` and
+can also run independently with `node scripts/build-research.mjs`.
+Desktop uses three columns; mobile stacks the full diagrams vertically.
+The SVGs contain only local vector shapes and CSS animation, with no JavaScript
+or external dependencies. Reduced-motion picture sources select dedicated
+`research-still.svg` and `research-mobile-still.svg` files with no animation
+styles. The still-view link also opens a nonmoving version on demand.
+The native “Explore the research” disclosure provides the README interaction;
+the plots themselves do not respond to pointer input inside an image.
+
 The skills panel has two seamless, right-to-left logo rows with soft edge fades.
 All 34 logos are embedded in the generated SVGs, so there is no icon-service
 request at viewing time. Edit `scripts/build-skills.mjs` to update the selection;
@@ -73,7 +87,7 @@ has been removed to let the artwork carry the motion. Soft ambient lighting,
 rounded frames, and fine top-edge highlights tie the local panels together.
 
 Project covers and launch/source links open the supplied destinations. Native
-`details` controls expand the skills table and repository snapshot. Screenshots and the logo
+`details` controls expand the research explanation, skills table, and repository snapshot. Screenshots and the logo
 strip remain visible; the detailed skills table expands on demand. Keep `assets/project_screenshots/` with
 the README when publishing. GitHub README interaction uses links, anchors, and
 disclosures; custom JavaScript galleries and hover controls are not supported.

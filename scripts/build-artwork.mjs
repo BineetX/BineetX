@@ -1,6 +1,7 @@
 // Deterministic, dependency-free vector artwork. Run: node scripts/build-artwork.mjs
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import './build-skills.mjs';
+import './build-research.mjs';
 
 const out = new URL('../assets/', import.meta.url);
 await mkdir(out, { recursive: true });
@@ -109,30 +110,6 @@ for (const [index, project] of projects.entries()) {
   await writeFile(new URL(`${project.file}.svg`, out), svg(148, project.name, `${project.name}. Decorative project artwork; descriptions and links are in the README.`, body));
 }
 
-let research = line(333, 28, 333, 182) + line(666, 28, 666, 182);
-const graph = [[49,79],[97,44],[121,111],[174,67],[216,108],[261,51],[283,123]];
-for (const [i,j] of [[0,1],[0,2],[1,2],[1,3],[2,3],[2,4],[3,4],[3,5],[4,5],[4,6],[5,6]]) research += line(...graph[i], ...graph[j], C.green);
-for (const [i, p] of graph.entries()) research += circle(...p, i === 3 ? 7 : 4, i === 3 ? C.ink : C.mint);
-research += text(30, 180, 'Graph learning', 22, C.ink, 'font-weight="600"');
-// Schematic interaction matrix: no numeric scale or invented experimental results.
-for (let row = 0; row < 5; row++) for (let col = 0; col < 8; col++) research += `<rect x="${376 + col * 30}" y="${32 + row * 20}" width="25" height="15" rx="2" fill="${C.mint}" opacity="${(.12 + ((row + col * 3) % 7) * .11).toFixed(2)}"/>`;
-research += text(363, 180, 'Drug synergy', 22, C.ink, 'font-weight="600"');
-research += line(708, 130, 951, 130) + line(708, 130, 708, 31);
-research += `<path d="M 708 124 C 751 123 764 99 799 78 S 874 52 951 35" fill="none" stroke="${C.mint}" stroke-width="2"/>`;
-research += `<path d="M 708 124 C 755 124 781 123 816 102 S 894 84 951 43" fill="none" stroke="${C.green}" stroke-width="1.5" stroke-dasharray="4 5"/>`;
-research += circle(799, 78, 4) + circle(900, 47, 4);
-research += text(696, 180, 'Mathematical models', 22, C.ink, 'font-weight="600"');
-await writeFile(new URL('research.svg', out), svg(210, 'Research directions', 'Illustrative research diagrams for graph learning, biological knowledge graphs, multimodal drug-combination prediction, mathematical modelling, and reproducible workflows. Not experimental results.', research));
-let compactResearch = '';
-const researchDiagrams = research.replace(/<text\b[^>]*>[\s\S]*?<\/text>/g, '');
-const researchRows = ['Graph learning', 'Drug synergy', 'Mathematical models'];
-for (const [i, title] of researchRows.entries()) {
-  const y = i * 104;
-  if (i) compactResearch += line(24, y, 396, y);
-  compactResearch += `<svg x="18" y="${y + 16}" width="110" height="72" viewBox="${i * 333 + 20} 20 290 120" overflow="hidden" aria-hidden="true">${researchDiagrams}</svg>`;
-  compactResearch += text(148, y + 59, title, 20, C.ink, 'font-weight="600"');
-}
-await writeFile(new URL('research-mobile.svg', out), svg(312, 'Research directions', 'Graph learning, drug-combination prediction, mathematical modelling, and reproducible workflows. Illustrative diagrams, not experimental results.', compactResearch, 420));
 // SVG image documents do not consistently inherit reduced-motion media queries.
 // Native picture sources select these still versions in the README instead.
 for (const name of ['banner', 'banner-mobile', 'genocular', 'gememiom', 'myocircbase']) {
