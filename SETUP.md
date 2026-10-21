@@ -1,7 +1,7 @@
 # Maintaining this profile
 
-The README is a Markdown portfolio with repository-owned SVG artwork. Project
-names appear on compact covers, followed by visible interface screenshots;
+The README is a Markdown portfolio with repository-owned SVG artwork. GENOCULAR
+and GeMemiOM combine their title, animated accent, and screenshot in one card;
 descriptions and links stay in `README.md`.
 
 ## Edit or add projects
@@ -20,7 +20,8 @@ A short description of what the project does.\
 ```
 
 A cover is optional. To create one matching the current set, add an entry to the
-`projects` array in `scripts/build-artwork.mjs`, add the generated filename to the
+`projects` array in `scripts/build-projects.mjs`, add its preview WebP and original
+PNG (or set `preview: false` for a header only), add the generated filename to the
 workflow's `git add` list, and run:
 
 ```sh
@@ -31,9 +32,16 @@ Use the cover in place of the heading: `[![Project name](assets/name.svg)](URL)`
 The artwork generator never edits the README or your project descriptions.
 GENOCULAR, GeMemiOM, and MyoCircBase use the URLs supplied by the profile owner.
 
-Keep the original PNGs in `assets/project_screenshots/`. The README displays
-GENOCULAR and GeMemiOM at full width outside disclosures; selecting a screenshot
-opens the original image. Each project has short destination links and a stable
+Keep the original PNGs in `assets/project_screenshots/`. `scripts/build-projects.mjs`
+embeds the corresponding 1440-pixel-wide `-preview.webp` copies (quality 92) in
+the showcase cards. Regenerate these compressed copies when changing an original
+screenshot; keep its aspect ratio. The artwork build imports this generator.
+The cards have mobile layouts, static reduced-motion variants, and moving
+header accents. Animation never covers the interface. Selecting a card opens
+the original screenshot; the links beneath it open the project destinations.
+MyoCircBase uses the same header proportions without a screenshot and links
+directly to its repository.
+Each project has short destination links and a stable
 anchor. Keep descriptions factual and brief; avoid slogans and instructions
 that repeat what the links and images already communicate.
 When adding a screenshot, use descriptive alt text and preserve its aspect ratio.
@@ -62,11 +70,14 @@ conceptual illustrations, not experimental measurements. Edit
 can also run independently with `node scripts/build-research.mjs`.
 Desktop uses three columns; mobile stacks the full diagrams vertically.
 The SVGs contain only local vector shapes and CSS animation, with no JavaScript
-or external dependencies. Reduced-motion picture sources select dedicated
-`research-still.svg` and `research-mobile-still.svg` files with no animation
-styles. The still-view link also opens a nonmoving version on demand.
-The native “Explore the research” disclosure provides the README interaction;
-the plots themselves do not respond to pointer input inside an image.
+or external dependencies. The README uses `research-motion.svg` and its mobile
+variant. Their new filenames avoid reusing older cached image responses.
+Reduced-motion picture sources select `research-motion-still.svg` and
+`research-motion-mobile-still.svg`; there is no visible still-view link.
+The diagrams retain only their three titles. Explanations and the conceptual
+illustration note live in accessible image descriptions, not visible captions.
+Normal motion is visible in the live GitHub image test; system/browser
+reduced-motion preferences intentionally select the static variants.
 
 The skills panel has two seamless, right-to-left logo rows with soft edge fades.
 All 34 logos are embedded in the generated SVGs, so there is no icon-service
@@ -86,8 +97,8 @@ The contribution snake retains its upstream behavior. The rotating typing text
 has been removed to let the artwork carry the motion. Soft ambient lighting,
 rounded frames, and fine top-edge highlights tie the local panels together.
 
-Project covers and launch/source links open the supplied destinations. Native
-`details` controls expand the research explanation, skills table, and repository snapshot. Screenshots and the logo
+Project cards open the original screenshots; website/source links open the
+supplied destinations. Native `details` controls expand the skills table and repository snapshot. Screenshots and the logo
 strip remain visible; the detailed skills table expands on demand. Keep `assets/project_screenshots/` with
 the README when publishing. GitHub README interaction uses links, anchors, and
 disclosures; custom JavaScript galleries and hover controls are not supported.

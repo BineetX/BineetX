@@ -16,7 +16,7 @@ let graph = '<g class="constellation">';
 for (const [i, [a, b]] of edges.entries()) {
   const d = `M ${nodes[a].join(' ')} L ${nodes[b].join(' ')}`;
   graph += path(d, '#38566C', 'stroke-width="1"');
-  graph += path(d, cyan, `class="message" pathLength="100" stroke-width="1.5" stroke-dasharray="8 92" style="animation-delay:-${i * .43}s"`);
+  graph += path(d, '#DDF6FF', `class="message" pathLength="100" stroke-width="2" stroke-linecap="round" stroke-dasharray="12 88" style="animation-delay:-${i * .43}s"`);
 }
 for (const [i, [x, y]] of nodes.entries()) {
   const color = [cyan, '#B4C6E7', '#5EEAD4'][i % 3];
@@ -25,7 +25,6 @@ for (const [i, [x, y]] of nodes.entries()) {
   else graph += dot(x, y, 4, color);
 }
 graph += '</g>';
-graph += text(22, 190, 'DRUG', 9, cyan, 'letter-spacing="1.4"') + text(113, 190, 'GENE', 9, '#B4C6E7', 'letter-spacing="1.4"') + text(202, 190, 'CONTEXT', 9, '#5EEAD4', 'letter-spacing="1.4"');
 
 // Deliberately schematic, without scores or quantitative experimental claims.
 let matrix = '';
@@ -33,10 +32,8 @@ for (let row = 0; row < 6; row++) for (let col = 0; col < 8; col++) {
   const opacity = (.18 + ((row * 3 + col * 5) % 9) * .075).toFixed(3);
   matrix += `<rect x="${44 + col * 29}" y="${26 + row * 23}" width="23" height="17" rx="3" fill="${cyan}" opacity="${opacity}" class="cell" style="animation-delay:-${(row + col) * .47}s"/>`;
 }
-matrix += '<g clip-path="url(#matrix-clip)"><rect class="scan" x="38" y="20" width="37" height="143" fill="url(#scan-light)"/><path class="scan" d="M 73 20 V 163" stroke="#DDF6FF" opacity=".6"/></g>';
+matrix += '<g clip-path="url(#matrix-clip)"><rect class="scan" x="38" y="20" width="37" height="143" fill="url(#scan-light)"/><path class="scan" d="M 73 20 V 163" stroke="#DDF6FF" stroke-width="1.5" opacity=".85"/></g>';
 matrix += path('M 38 22 V 168 H 278', '#38566C');
-matrix += text(122, 190, 'DRUG B', 9, dim, 'letter-spacing="1.4"');
-matrix += text(19, 112, 'DRUG A', 9, dim, 'letter-spacing="1.4" transform="rotate(-90 19 112)"');
 
 const modelPoint = t => [37 + t * 241, 157 - 119 / (1 + Math.exp(-9 * (t - .48)))];
 const curve = Array.from({ length: 61 }, (_, i) => modelPoint(i / 60));
@@ -56,24 +53,22 @@ model += path(modelPath, '#28465B', 'stroke-width="2"');
 model += path(modelPath, cyan, 'class="trajectory" pathLength="100" stroke-width="2.5" stroke-linecap="round"');
 const [startX, startY] = modelPoint(0);
 model += `<g class="tracer" style="transform:translate(${startX}px,${startY}px)">${dot(0,0,10,cyan,'opacity=".12"')}${dot(0,0,4,ink)}</g>`;
-model += text(124, 190, 'MODEL TIME', 9, dim, 'letter-spacing="1.4"');
-model += text(18, 125, 'RESPONSE', 9, dim, 'letter-spacing="1.4" transform="rotate(-90 18 125)"');
 
 const tracerFrames = curve.map(([x,y], i) => {
   return `${(i / 60 * 100).toFixed(3)}%{transform:translate(${x.toFixed(2)}px,${y.toFixed(2)}px)}`;
 }).join('');
 const styles = `<style>
-  .constellation{transform-origin:155px 91px;animation:drift 12s ease-in-out infinite alternate}
-  .message{animation:transmit 5s linear infinite}
-  .halo{animation:breathe 5s ease-in-out infinite}
-  .cell{animation:heat 6s ease-in-out infinite}
-  .scan{animation:scan 7s ease-in-out infinite alternate}
-  .trajectory{stroke-dasharray:100;animation:draw 9s linear infinite}
-  .tracer{animation:trace 9s linear infinite}
-  @keyframes drift{from{transform:rotate(-4deg) translateY(-2px)}to{transform:rotate(4deg) translateY(3px)}}
+  .constellation{transform-origin:155px 91px;animation:drift 7s ease-in-out infinite alternate}
+  .message{animation:transmit 3.6s linear infinite}
+  .halo{animation:breathe 4s ease-in-out infinite}
+  .cell{animation:heat 4.5s ease-in-out infinite}
+  .scan{animation:scan 4.5s ease-in-out infinite alternate}
+  .trajectory{stroke-dasharray:100;animation:draw 6s linear infinite alternate}
+  .tracer{animation:trace 6s linear infinite alternate}
+  @keyframes drift{from{transform:rotate(-6deg) translateY(-3px)}to{transform:rotate(6deg) translateY(3px)}}
   @keyframes transmit{to{stroke-dashoffset:-100}}
   @keyframes breathe{0%,100%{opacity:.15;transform:scale(.8)}50%{opacity:.5;transform:scale(1.25)}}
-  @keyframes heat{0%,100%{fill:#487891}50%{fill:#A7E5FF}}
+  @keyframes heat{0%,100%{fill:#29445D}50%{fill:#C3F0FF}}
   @keyframes scan{from{transform:translateX(0)}to{transform:translateX(205px)}}
   @keyframes draw{${drawFrames}}
   @keyframes trace{${tracerFrames}}
@@ -81,27 +76,24 @@ const styles = `<style>
 </style>`;
 
 const panels = [
-  { number:'01', title:'Graph constellations', subtitle:'Heterogeneous message passing', art:graph },
-  { number:'02', title:'Drug synergy', subtitle:'Learning across combinations', art:matrix },
-  { number:'03', title:'Mathematical models', subtitle:'Tracing a system over time', art:model },
+  { title:'Graph learning', art:graph },
+  { title:'Drug synergy', art:matrix },
+  { title:'Mathematical models', art:model },
 ];
 const description = 'Animated illustrative research diagrams: a connected graph constellation with travelling signals, a changing drug-combination matrix, and a traced mathematical response curve. Conceptual illustrations, not experimental results.';
 
 function render(mobile, animated) {
-  const width = mobile ? 420 : 1000, height = mobile ? 908 : 326;
+  const width = mobile ? 420 : 1000, height = mobile ? 732 : 252;
   let body = '';
   for (const [i, panel] of panels.entries()) {
-    const x = mobile ? 55 : 22 + i * 333, y = mobile ? 23 + i * 288 : 23;
-    if (i) body += mobile ? path(`M 30 ${y - 9} H 390`,line) : path(`M ${i * 333} 28 V 280`,line);
+    const x = mobile ? 55 : 22 + i * 333, y = mobile ? 18 + i * 244 : 18;
+    if (i) body += mobile ? path(`M 30 ${y - 18} H 390`,line) : path(`M ${i * 333} 28 V 224`,line);
     body += `<g transform="translate(${x} ${y})" data-panel="${i}">`;
-    body += text(8, 9, panel.number, 10, cyan, 'letter-spacing="2"');
     body += `<ellipse cx="155" cy="110" rx="145" ry="95" fill="url(#ambient)"/>`;
-    body += `<g transform="translate(0 14)">${panel.art}</g>`;
-    body += text(8, 235, panel.title, 21, ink, 'font-weight="600"');
-    body += text(8, 256, panel.subtitle, 12);
+    body += panel.art;
+    body += text(8, 211, panel.title, 21, ink, 'font-weight="600"');
     body += '</g>';
   }
-  body += text(mobile ? 63 : 30, height - 16, 'CONCEPTUAL MOTION · NOT EXPERIMENTAL DATA', mobile ? 10 : 9, '#8094AA', 'letter-spacing="1"');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">
 <title id="title">Research in motion${animated ? '' : ' — still view'}</title>
 <desc id="desc">${animated ? description : description.replace('Animated illustrative', 'Static illustrative').replace('with travelling signals', 'with signal paths').replace('changing drug-combination', 'drug-combination')}</desc>
@@ -120,7 +112,7 @@ ${body}
 }
 
 for (const mobile of [false, true]) for (const animated of [true, false]) {
-  const name = `research${mobile ? '-mobile' : ''}${animated ? '' : '-still'}.svg`;
+  const name = `research-motion${mobile ? '-mobile' : ''}${animated ? '' : '-still'}.svg`;
   await writeFile(new URL(name, out), render(mobile, animated));
 }
 console.log('Built research animations and desktop/mobile still alternatives.');

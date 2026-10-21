@@ -8,6 +8,7 @@ on:
     paths:
       - "scripts/**"
       - "assets/skill-logos/**"
+      - "assets/project_screenshots/**"
       - ".github/workflows/profile.yml"
 
 permissions:
@@ -52,7 +53,8 @@ jobs:
           git add assets/banner.svg assets/banner-mobile.svg assets/genocular.svg assets/gememiom.svg assets/myocircbase.svg assets/research.svg assets/research-mobile.svg assets/activity.svg assets/activity-mobile.svg assets/github-snake.svg assets/github-snake-dark.svg
           git add assets/banner-still.svg assets/banner-mobile-still.svg assets/genocular-still.svg assets/gememiom-still.svg assets/myocircbase-still.svg
           git add assets/skills.svg assets/skills-mobile.svg assets/skills-still.svg assets/skills-mobile-still.svg
-          git add assets/research-still.svg assets/research-mobile-still.svg
+          git add assets/research-motion.svg assets/research-motion-mobile.svg assets/research-motion-still.svg assets/research-motion-mobile-still.svg
+          git add assets/genocular-showcase*.svg assets/gememiom-showcase*.svg assets/myocircbase-showcase*.svg
           if git diff --cached --quiet; then
             echo "Profile visuals are already current."
             exit 0

@@ -14,18 +14,16 @@ BRIC-Institute of Life Sciences, Bhubaneswar
 
 <a id="genocular"></a>
 
-<a href="https://genocular.dixitlab.org">
+<a href="assets/project_screenshots/genocular.png">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-still.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular.svg" alt="GENOCULAR" width="100%" />
+    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase-mobile-still.svg" />
+    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase-mobile.svg" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase-still.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase.svg" alt="GENOCULAR — whole-genome sequencing and metagenomics interface. Select to view the full-size screenshot." width="100%" />
   </picture>
 </a>
 
 Whole-genome sequencing and metagenomics workflows for short, long, and hybrid reads.
-
-<a href="assets/project_screenshots/genocular.png">
-  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/project_screenshots/genocular.png" alt="GENOCULAR interface showing WGS and metagenomics analysis, short/long/hybrid read modes, and the pipeline from sequencing reads to genome visualization. Select to view the full-size screenshot." width="100%" />
-</a>
 
 [Website ↗](https://genocular.dixitlab.org) &nbsp; · &nbsp; [Source ↗](https://github.com/BineetX/GENOCULAR)
 
@@ -33,18 +31,16 @@ Whole-genome sequencing and metagenomics workflows for short, long, and hybrid r
 
 <a id="gememiom"></a>
 
-<a href="https://www.gememiom.org">
+<a href="assets/project_screenshots/gememiom.png">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-still.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom.svg" alt="GeMemiOM" width="100%" />
+    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase-mobile-still.svg" />
+    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase-mobile.svg" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase-still.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase.svg" alt="GeMemiOM — otitis media genes and molecular interactions interface. Select to view the full-size screenshot." width="100%" />
   </picture>
 </a>
 
 Otitis-media-associated genes, methylation study targets, and microRNA interactions.
-
-<a href="assets/project_screenshots/gememiom.png">
-  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/project_screenshots/gememiom.png" alt="GeMemiOM interface showing otitis-media gene selection, CpG-island and transcription-factor binding information, functional enrichment, and biological interaction tools. Select to view the full-size screenshot." width="100%" />
-</a>
 
 [Website ↗](https://www.gememiom.org) &nbsp; · &nbsp; [Publication ↗](https://doi.org/10.1016/j.jgg.2023.07.010)
 
@@ -54,8 +50,10 @@ Otitis-media-associated genes, methylation study targets, and microRNA interacti
 
 <a href="https://github.com/BineetX/MyoCIRCBase">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-still.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase.svg" alt="MyoCircBase" width="100%" />
+    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase-mobile-still.svg" />
+    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase-mobile.svg" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase-still.svg" />
+    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase.svg" alt="MyoCircBase" width="100%" />
   </picture>
 </a>
 
@@ -73,22 +71,11 @@ Otitis-media-associated genes, methylation study targets, and microRNA interacti
 Heterogeneous graph neural networks for drug synergy prediction.
 
 <picture>
-  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-mobile-still.svg" />
-  <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-mobile.svg" />
-  <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-still.svg" />
-  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research.svg" alt="Research in motion: a graph constellation with travelling messages, an animated drug-combination matrix, and a mathematical response curve traced over time. Conceptual illustrations, not experimental results." width="100%" />
+  <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion-mobile-still.svg" />
+  <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion-mobile.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion-still.svg" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion.svg" alt="Graph learning, drug synergy, and mathematical models: animated conceptual diagrams, not experimental results." width="100%" />
 </picture>
-
-[Still view ↗](https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-still.svg)
-
-<details>
-<summary>Explore the research</summary>
-
-- **Graph constellations:** heterogeneous graph neural networks connect different biological entities and pass information along their relationships.
-- **Drug synergy:** learning across drug combinations and biological context supports synergy prediction. The animated matrix illustrates this research direction without displaying measured scores.
-- **Mathematical models:** response curves illustrate how a system can evolve over time. These trajectories are schematic, not fitted experimental data.
-
-</details>
 
 <a id="toolkit"></a>
 
