@@ -62,6 +62,20 @@ research descriptions were consolidated into the research section and toolkit.
 
 ## Motion and interaction
 
+Six social buttons below the introduction link to LinkedIn, Google Scholar,
+ORCID, ResearchGate, X/Twitter, and Bioinformatica on YouTube. Each is a separate
+native anchor with an accessible image name and a hover title. The icon buttons
+have slowly moving border highlights; reduced-motion sources use static SVGs.
+They wrap into two rows on phones without custom page CSS or JavaScript.
+GitHub does not pass pointer events into embedded SVG images, so the interaction
+uses native links, tooltips, and keyboard focus instead of simulated hover effects.
+
+Edit the destinations in `README.md` and the artwork in `scripts/build-socials.mjs`.
+The main artwork build imports this generator. Brand paths are vendored from
+Simple Icons; provenance and the CC0 license reference are in
+`assets/social-logos/sources.json`. The destinations come from the owner's
+portfolio and GitHub profile; ORCID uses its public identifier URL.
+
 The research panel uses a moving graph constellation with travelling edge
 signals, a pulsing drug-combination matrix with a scanning highlight, and a
 progressively drawn response curve with a moving tracer. All three are

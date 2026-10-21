@@ -8,6 +8,27 @@
 **Senior Research Fellow (Ph.D.) · Computational Biology & Bioinformatics Lab**\
 BRIC-Institute of Life Sciences, Bhubaneswar
 
+<p align="left">
+  <a href="https://www.linkedin.com/in/bineetx/" title="LinkedIn">
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin.svg" width="88" height="72" alt="LinkedIn" /></picture>
+  </a>
+  <a href="https://scholar.google.com/citations?hl=en&amp;user=9FZtto0AAAAJ" title="Google Scholar">
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar.svg" width="88" height="72" alt="Google Scholar" /></picture>
+  </a>
+  <a href="https://orcid.org/0000-0002-2447-701X" title="ORCID">
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid.svg" width="88" height="72" alt="ORCID" /></picture>
+  </a>
+  <a href="https://www.researchgate.net/profile/Bineet-Kumar-Mohanta" title="ResearchGate">
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate.svg" width="88" height="72" alt="ResearchGate" /></picture>
+  </a>
+  <a href="https://twitter.com/mr_bineet" title="X / Twitter">
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x.svg" width="88" height="72" alt="X / Twitter" /></picture>
+  </a>
+  <a href="https://www.youtube.com/c/BioinformaticaYT" title="YouTube — Bioinformatica">
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube.svg" width="88" height="72" alt="YouTube — Bioinformatica" /></picture>
+  </a>
+</p>
+
 [Projects](#projects) &nbsp; · &nbsp; [Research](#research) &nbsp; · &nbsp; [Skills](#skills) &nbsp; · &nbsp; [Activity](#activity) &nbsp; · &nbsp; [Portfolio ↗](https://bineet.dev)
 
 ### Projects

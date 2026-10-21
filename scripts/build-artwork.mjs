@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import './build-skills.mjs';
 import './build-research.mjs';
 import './build-projects.mjs';
+import './build-socials.mjs';
 
 const out = new URL('../assets/', import.meta.url);
 await mkdir(out, { recursive: true });

@@ -1,0 +1,13 @@
+{
+  "collection": "Simple Icons v13",
+  "license": "CC0-1.0",
+  "licenseUrl": "https://github.com/simple-icons/simple-icons/blob/13.21.0/LICENSE.md",
+  "icons": {
+    "linkedin": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/linkedin.svg",
+    "x": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/x.svg",
+    "youtube": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/youtube.svg",
+    "googlescholar": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/googlescholar.svg",
+    "orcid": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/orcid.svg",
+    "researchgate": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/researchgate.svg"
+  }
+}
