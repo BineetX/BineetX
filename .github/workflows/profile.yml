@@ -58,6 +58,7 @@ jobs:
           git add assets/genocular-showcase*.svg assets/gememiom-showcase*.svg assets/myocircbase-showcase*.svg
           git add assets/projects/*.svg
           git add assets/socials/*.svg
+          git add assets/navigation/*.svg
           if git diff --cached --quiet; then
             echo "Profile visuals are already current."
             exit 0

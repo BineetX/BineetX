@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="104" height="36" viewBox="0 0 104 36" role="img" aria-labelledby="title">
+<title id="title">Projects</title>
+<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#152132"/><stop offset="1" stop-color="#0D1117"/></linearGradient></defs>
+<rect x=".5" y="2.5" width="103" height="31" rx="10" fill="url(#surface)" stroke="#314359"/>
+<g transform="translate(11 10)" fill="none" stroke="#7DD3FC" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="5" height="5" rx="1"/><rect x="9" y="1" width="5" height="5" rx="1"/><rect x="1" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></g>
+<text x="33" y="22" fill="#DDEAF7" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Projects</text>
+</svg>

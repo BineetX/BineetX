@@ -5,6 +5,7 @@ import './build-research.mjs';
 import './build-projects.mjs';
 import './build-project-grid.mjs';
 import './build-socials.mjs';
+import './build-navigation.mjs';
 
 const out = new URL('../assets/', import.meta.url);
 await mkdir(out, { recursive: true });
@@ -62,10 +63,11 @@ banner += text(37, 218, 'Mohanta', 86, C.ink, 'font-weight="700" letter-spacing=
 banner += `<ellipse cx="799" cy="181" rx="154" ry="53" transform="rotate(-28 799 181)" fill="none" stroke="${C.green}" stroke-width=".8"/><g class="globe">${globe}</g>`;
 banner += circle(937, 113, 4, C.mint, 'class="signal"') + circle(937, 113, 9, 'none', `stroke="${C.mint}" opacity=".35"`);
 banner += line(42, 296, 958, 296);
-banner += label(42, 326, 'COMPUTATIONAL BIOLOGY');
-banner += label(379, 326, 'BIOINFORMATICS');
-banner += label(715, 326, 'SCIENTIFIC SOFTWARE');
-await writeFile(new URL('banner.svg', out), svg(350, 'Bineet Kumar Mohanta', 'Computational biology, bioinformatics, and scientific software. A decorative geometric network sphere accompanies the name.', banner));
+banner += label(42, 324, 'COMPUTATIONAL BIOLOGY');
+banner += label(542, 324, 'BIOINFORMATICS');
+banner += label(42, 350, 'SCIENTIFIC SOFTWARE DEVELOPMENT');
+banner += label(542, 350, 'MATHEMATICAL MODELING');
+await writeFile(new URL('banner.svg', out), svg(374, 'Bineet Kumar Mohanta', 'Computational biology, bioinformatics, scientific software development, and mathematical modeling. A decorative geometric network sphere accompanies the name.', banner));
 let compactBanner = label(24, 30, 'BINEETX', C.mint);
 compactBanner += line(24, 46, 396, 46);
 compactBanner += text(23, 98, 'Bineet Kumar', 34, C.ink, 'font-weight="600" letter-spacing="-1"');
@@ -73,8 +75,9 @@ compactBanner += text(21, 157, 'Mohanta', 62, C.ink, 'font-weight="700" letter-s
 compactBanner += `<g transform="translate(104 56) scale(.32)"><g class="globe">${globe}</g></g>`;
 compactBanner += line(24, 213, 396, 213);
 compactBanner += text(24, 239, 'Computational biology · Bioinformatics', 13, C.mint);
-compactBanner += text(24, 260, 'Scientific software', 13);
-await writeFile(new URL('banner-mobile.svg', out), svg(282, 'Bineet Kumar Mohanta', 'Computational biology, bioinformatics, and scientific software.', compactBanner, 420));
+compactBanner += text(24, 262, 'Scientific Software Development', 14);
+compactBanner += text(24, 285, 'Mathematical Modeling', 14);
+await writeFile(new URL('banner-mobile.svg', out), svg(308, 'Bineet Kumar Mohanta', 'Computational biology, bioinformatics, scientific software development, and mathematical modeling.', compactBanner, 420));
 
 function arc(cx, cy, r, start, end) {
   const point = a => [cx + r * Math.cos(a * Math.PI / 180), cy + r * Math.sin(a * Math.PI / 180)];

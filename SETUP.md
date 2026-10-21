@@ -46,6 +46,13 @@ research descriptions were consolidated into the research section and toolkit.
 
 ## Motion and interaction
 
+The banner includes scientific software development and mathematical modeling,
+with two rows of specialties on desktop and three lines on mobile. The centered
+affiliation uses a larger native heading with the institution on its own line. Five centered
+navigation buttons use artwork from `scripts/build-navigation.mjs`, native
+section links, and a portfolio link. Edit destinations in `README.md`; the main
+build and refresh workflow include `assets/navigation/` automatically.
+
 Six social buttons below the introduction link to LinkedIn, Google Scholar,
 ORCID, ResearchGate, X/Twitter, and Bioinformatica on YouTube. Each is a separate
 native anchor with an accessible image name and a hover title. The icon buttons

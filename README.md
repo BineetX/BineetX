@@ -2,11 +2,13 @@
   <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-mobile-still.svg" />
   <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-mobile.svg" />
   <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-still.svg" />
-  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner.svg" alt="Bineet Kumar Mohanta — computational biology, bioinformatics, and scientific software" width="100%" />
+  <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner.svg" alt="Bineet Kumar Mohanta — computational biology, bioinformatics, scientific software development, and mathematical modeling" width="100%" />
 </picture>
 
-**Senior Research Fellow (Ph.D.) · Computational Biology & Bioinformatics Lab**\
-BRIC-Institute of Life Sciences, Bhubaneswar
+<h3 align="center">
+  Senior Research Fellow (Ph.D.) · Computational Biology &amp; Bioinformatics Lab<br />
+  BRIC-Institute of Life Sciences, Bhubaneswar
+</h3>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/bineetx/" title="LinkedIn">
@@ -29,7 +31,13 @@ BRIC-Institute of Life Sciences, Bhubaneswar
   </a>
 </p>
 
-[Research](#research) &nbsp; · &nbsp; [Skills](#skills) &nbsp; · &nbsp; [Activity](#activity) &nbsp; · &nbsp; [Projects](#projects) &nbsp; · &nbsp; [Portfolio ↗](https://bineet.dev)
+<p align="center">
+  <a href="#research" title="Research"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/research.svg" width="104" height="36" alt="Research" /></a>
+  <a href="#skills" title="Skills"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/skills.svg" width="104" height="36" alt="Skills" /></a>
+  <a href="#activity" title="Activity"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/activity.svg" width="104" height="36" alt="Activity" /></a>
+  <a href="#projects" title="Projects"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/projects.svg" width="104" height="36" alt="Projects" /></a>
+  <a href="https://bineet.dev/" title="Portfolio"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/portfolio.svg" width="104" height="36" alt="Portfolio" /></a>
+</p>
 
 <a id="specialization"></a>
 
