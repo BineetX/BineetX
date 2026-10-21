@@ -1,50 +1,34 @@
 # Maintaining this profile
 
-The README is a Markdown portfolio with repository-owned SVG artwork. GENOCULAR
-and GeMemiOM combine their title, animated accent, and screenshot in one card;
-descriptions and links stay in `README.md`.
+The README uses repository-owned SVG artwork. Sections run in this order:
+Research, Skills, Activity, Projects. The final section is a compact two-column,
+four-card dashboard built with GitHub-compatible HTML table markup.
 
 ## Edit or add projects
 
-Edit the project descriptions directly in `README.md`. The comment below
-MyoCircBase marks where to add its description. End a description line with a
-backslash if you want the links on the next line.
+Edit destinations and accessible descriptions in the final table in `README.md`.
+Cards have equal dimensions, compact screenshot thumbnails or decorative artwork,
+and short destination links. GENOCULAR and GeMemiOM open their original PNGs;
+MyoCircBase and Bioinformatica open their repositories. Keep the stable anchors.
 
-To add another project, insert this before the research section:
-
-```markdown
-#### Project name
-
-A short description of what the project does.\
-[Website ↗](https://example.org) · [Source ↗](https://github.com/BineetX/REPOSITORY)
-```
-
-A cover is optional. To create one matching the current set, add an entry to the
-`projects` array in `scripts/build-projects.mjs`, add its preview WebP and original
-PNG (or set `preview: false` for a header only), add the generated filename to the
-workflow's `git add` list, and run:
+Edit `scripts/build-project-grid.mjs` to change the card artwork. Add new entries
+to its projects array and matching table cells to the README, two cells per row.
+Set `preview: true` only when the project has a corresponding preview WebP.
+The workflow stages all generated SVGs in `assets/projects/`. Run:
 
 ```sh
 node scripts/build-artwork.mjs
 ```
 
-Use the cover in place of the heading: `[![Project name](assets/name.svg)](URL)`.
-The artwork generator never edits the README or your project descriptions.
-GENOCULAR, GeMemiOM, and MyoCircBase use the URLs supplied by the profile owner.
+Original PNGs and compressed preview WebPs stay in `assets/project_screenshots/`.
+The cards crop previews to fit their thumbnail frames; full screenshots remain
+available by selecting the image. Mobile artwork keeps titles readable in the
+two-column layout. Reduced-motion picture sources select static alternatives.
+Only project names are drawn as visible card text; longer descriptions belong
+in accessible image text. The generator never edits the README.
 
-Keep the original PNGs in `assets/project_screenshots/`. `scripts/build-projects.mjs`
-embeds the corresponding 1440-pixel-wide `-preview.webp` copies (quality 92) in
-the showcase cards. Regenerate these compressed copies when changing an original
-screenshot; keep its aspect ratio. The artwork build imports this generator.
-The cards have mobile layouts, static reduced-motion variants, and moving
-header accents. Animation never covers the interface. Selecting a card opens
-the original screenshot; the links beneath it open the project destinations.
-MyoCircBase uses the same header proportions without a screenshot and links
-directly to its repository.
-Each project has short destination links and a stable
-anchor. Keep descriptions factual and brief; avoid slogans and instructions
-that repeat what the links and images already communicate.
-When adding a screenshot, use descriptive alt text and preserve its aspect ratio.
+The previous full-width showcase assets and their generator are retained for
+existing direct links, but the README now uses `assets/projects/`.
 
 ## Specialization and skills
 
@@ -111,8 +95,8 @@ The contribution snake retains its upstream behavior. The rotating typing text
 has been removed to let the artwork carry the motion. Soft ambient lighting,
 rounded frames, and fine top-edge highlights tie the local panels together.
 
-Project cards open the original screenshots; website/source links open the
-supplied destinations. Native `details` controls expand the skills table and repository snapshot. Screenshots and the logo
+Screenshot cards open the originals; other cards open their repositories.
+Website/source links open the supplied destinations. Native `details` controls expand the skills table and repository snapshot. Screenshots and the logo
 strip remain visible; the detailed skills table expands on demand. Keep `assets/project_screenshots/` with
 the README when publishing. GitHub README interaction uses links, anchors, and
 disclosures; custom JavaScript galleries and hover controls are not supported.

@@ -29,61 +29,7 @@ BRIC-Institute of Life Sciences, Bhubaneswar
   </a>
 </p>
 
-[Projects](#projects) &nbsp; · &nbsp; [Research](#research) &nbsp; · &nbsp; [Skills](#skills) &nbsp; · &nbsp; [Activity](#activity) &nbsp; · &nbsp; [Portfolio ↗](https://bineet.dev)
-
-### Projects
-
-<a id="genocular"></a>
-
-<a href="assets/project_screenshots/genocular.png">
-  <picture>
-    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase-mobile-still.svg" />
-    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase-mobile.svg" />
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase-still.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/genocular-showcase.svg" alt="GENOCULAR — whole-genome sequencing and metagenomics interface. Select to view the full-size screenshot." width="100%" />
-  </picture>
-</a>
-
-Whole-genome sequencing and metagenomics workflows for short, long, and hybrid reads.
-
-[Website ↗](https://genocular.dixitlab.org) &nbsp; · &nbsp; [Source ↗](https://github.com/BineetX/GENOCULAR)
-
-<br />
-
-<a id="gememiom"></a>
-
-<a href="assets/project_screenshots/gememiom.png">
-  <picture>
-    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase-mobile-still.svg" />
-    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase-mobile.svg" />
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase-still.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/gememiom-showcase.svg" alt="GeMemiOM — otitis media genes and molecular interactions interface. Select to view the full-size screenshot." width="100%" />
-  </picture>
-</a>
-
-Otitis-media-associated genes, methylation study targets, and microRNA interactions.
-
-[Website ↗](https://www.gememiom.org) &nbsp; · &nbsp; [Publication ↗](https://doi.org/10.1016/j.jgg.2023.07.010)
-
-<br />
-
-<a id="myocircbase"></a>
-
-<a href="https://github.com/BineetX/MyoCIRCBase">
-  <picture>
-    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase-mobile-still.svg" />
-    <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase-mobile.svg" />
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase-still.svg" />
-    <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/myocircbase-showcase.svg" alt="MyoCircBase" width="100%" />
-  </picture>
-</a>
-
-<!-- Add your MyoCircBase description here. -->
-[Source ↗](https://github.com/BineetX/MyoCIRCBase)
-
-<!-- Add future projects here using a Markdown heading, description, and links. -->
-
-[Bioinformatica ↗](https://github.com/BineetX/Bioinformatica) — Bioinformatics tools, databases, and tutorials.
+[Research](#research) &nbsp; · &nbsp; [Skills](#skills) &nbsp; · &nbsp; [Activity](#activity) &nbsp; · &nbsp; [Projects](#projects) &nbsp; · &nbsp; [Portfolio ↗](https://bineet.dev)
 
 <a id="specialization"></a>
 
@@ -143,3 +89,64 @@ Heterogeneous graph neural networks for drug synergy prediction.
 </a>
 
 </details>
+
+### Projects
+
+<table>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a id="genocular"></a>
+      <a href="assets/project_screenshots/genocular.png">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular-mobile-still.svg" />
+          <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular-mobile.svg" />
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular-still.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular.svg" alt="GENOCULAR — whole-genome sequencing and metagenomics. Open full screenshot." width="480" />
+        </picture>
+      </a>
+      <br />
+      <sub><a href="https://genocular.dixitlab.org">Website</a> · <a href="https://github.com/BineetX/GENOCULAR">Source</a></sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a id="gememiom"></a>
+      <a href="assets/project_screenshots/gememiom.png">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom-mobile-still.svg" />
+          <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom-mobile.svg" />
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom-still.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom.svg" alt="GeMemiOM — otitis media genes and molecular interactions. Open full screenshot." width="480" />
+        </picture>
+      </a>
+      <br />
+      <sub><a href="https://www.gememiom.org">Website</a> · <a href="https://doi.org/10.1016/j.jgg.2023.07.010">Paper</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a id="myocircbase"></a>
+      <a href="https://github.com/BineetX/MyoCIRCBase">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase-mobile-still.svg" />
+          <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase-mobile.svg" />
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase-still.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase.svg" alt="MyoCircBase — open repository." width="480" />
+        </picture>
+      </a>
+      <br />
+      <sub><a href="https://github.com/BineetX/MyoCIRCBase">Source</a></sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a id="bioinformatica"></a>
+      <a href="https://github.com/BineetX/Bioinformatica">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica-mobile-still.svg" />
+          <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica-mobile.svg" />
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica-still.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica.svg" alt="Bioinformatica — bioinformatics tools, databases, and tutorials. Open repository." width="480" />
+        </picture>
+      </a>
+      <br />
+      <sub><a href="https://github.com/BineetX/Bioinformatica">Source</a></sub>
+    </td>
+  </tr>
+</table>

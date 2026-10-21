@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="220" viewBox="0 0 240 220" role="img" aria-labelledby="title desc">
+<title id="title">Bioinformatica</title>
+<desc id="desc">Decorative project illustration. Select to open the repository.</desc>
+
+<defs>
+ <linearGradient id="surface" x2="0" y2="1"><stop stop-color="#152132"/><stop offset="1" stop-color="#0D1117"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#7DD3FC" stop-opacity=".14"/><stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/></radialGradient>
+ <clipPath id="screen"><rect x="12" y="76" width="216" height="132" rx="8"/></clipPath>
+</defs>
+<rect x=".5" y=".5" width="239" height="219" rx="14" fill="url(#surface)" stroke="#253347"/>
+<rect class="rim" x="1" y="1" width="238" height="218" rx="14" pathLength="100" fill="none" stroke="#7DD3FC" stroke-dasharray="8 92" opacity=".4"/>
+<text x="12" y="26" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="2">04</text>
+<text x="12" y="57" fill="#F0F6FC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" letter-spacing="-.6">Bioinformatica</text>
+<path d="M 212 19 H 221 V 28 M 212 28 L 221 19" fill="none" stroke="#7DD3FC" opacity=".65"/>
+<ellipse cx="120" cy="142" rx="108" ry="66" fill="url(#glow)"/><g fill="none" stroke="#7DD3FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <path d="M 120 114 Q 92 100 64 114 V 176 Q 92 162 120 176 Q 148 162 176 176 V 114 Q 148 100 120 114 V 176"/>
+         <path class="signal" d="M 91 130 l -10 10 10 10 M 149 130 l 10 10 -10 10"/>
+         </g>
+</svg>

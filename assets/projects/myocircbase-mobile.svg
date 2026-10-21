@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="220" viewBox="0 0 240 220" role="img" aria-labelledby="title desc">
+<title id="title">MyoCircBase</title>
+<desc id="desc">Decorative project illustration. Select to open the repository.</desc>
+<style>
+.orbit{transform-origin:120px 142px;animation:orbit 28s linear infinite}
+.signal{animation:signal 4s ease-in-out infinite alternate}
+.rim{animation:rim 18s linear infinite;animation-delay:-8s}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes signal{from{opacity:.35}to{opacity:1}}
+@keyframes rim{to{stroke-dashoffset:-100}}
+@media(prefers-reduced-motion:reduce){.orbit,.signal,.rim{animation:none}}
+</style>
+<defs>
+ <linearGradient id="surface" x2="0" y2="1"><stop stop-color="#152132"/><stop offset="1" stop-color="#0D1117"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#7DD3FC" stop-opacity=".14"/><stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/></radialGradient>
+ <clipPath id="screen"><rect x="12" y="76" width="216" height="132" rx="8"/></clipPath>
+</defs>
+<rect x=".5" y=".5" width="239" height="219" rx="14" fill="url(#surface)" stroke="#253347"/>
+<rect class="rim" x="1" y="1" width="238" height="218" rx="14" pathLength="100" fill="none" stroke="#7DD3FC" stroke-dasharray="8 92" opacity=".4"/>
+<text x="12" y="26" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="10" letter-spacing="2">03</text>
+<text x="12" y="57" fill="#F0F6FC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" letter-spacing="-.6">MyoCircBase</text>
+<path d="M 212 19 H 221 V 28 M 212 28 L 221 19" fill="none" stroke="#7DD3FC" opacity=".65"/>
+<ellipse cx="120" cy="142" rx="108" ry="66" fill="url(#glow)"/><g class="orbit"><ellipse cx="120" cy="142" rx="47" ry="25.85" transform="rotate(0 120 142)" fill="none" stroke="#7DD3FC" opacity=".65"/><ellipse cx="120" cy="142" rx="47" ry="25.85" transform="rotate(60 120 142)" fill="none" stroke="#7DD3FC" opacity=".65"/><ellipse cx="120" cy="142" rx="47" ry="25.85" transform="rotate(120 120 142)" fill="none" stroke="#7DD3FC" opacity=".65"/></g>
+         <circle cx="120" cy="142" r="5" fill="#DDEAF7"/>
+</svg>
