@@ -8,24 +8,24 @@
 **Senior Research Fellow (Ph.D.) · Computational Biology & Bioinformatics Lab**\
 BRIC-Institute of Life Sciences, Bhubaneswar
 
-<p align="left">
+<p align="center">
   <a href="https://www.linkedin.com/in/bineetx/" title="LinkedIn">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin.svg" width="88" height="72" alt="LinkedIn" /></picture>
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin.svg" width="72" height="59" alt="LinkedIn" /></picture>
   </a>
   <a href="https://scholar.google.com/citations?hl=en&amp;user=9FZtto0AAAAJ" title="Google Scholar">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar.svg" width="88" height="72" alt="Google Scholar" /></picture>
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar.svg" width="72" height="59" alt="Google Scholar" /></picture>
   </a>
   <a href="https://orcid.org/0000-0002-2447-701X" title="ORCID">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid.svg" width="88" height="72" alt="ORCID" /></picture>
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid.svg" width="72" height="59" alt="ORCID" /></picture>
   </a>
   <a href="https://www.researchgate.net/profile/Bineet-Kumar-Mohanta" title="ResearchGate">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate.svg" width="88" height="72" alt="ResearchGate" /></picture>
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate.svg" width="72" height="59" alt="ResearchGate" /></picture>
   </a>
   <a href="https://twitter.com/mr_bineet" title="X / Twitter">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x.svg" width="88" height="72" alt="X / Twitter" /></picture>
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x.svg" width="72" height="59" alt="X / Twitter" /></picture>
   </a>
   <a href="https://www.youtube.com/c/BioinformaticaYT" title="YouTube — Bioinformatica">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube.svg" width="88" height="72" alt="YouTube — Bioinformatica" /></picture>
+    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube.svg" width="72" height="59" alt="YouTube — Bioinformatica" /></picture>
   </a>
 </p>
 
