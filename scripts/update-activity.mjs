@@ -1,7 +1,6 @@
 // Public data only. Node 22+, no dependencies or personal access token required.
 import { mkdir, writeFile, rename } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { writeLightArtwork } from './build-light-artwork.mjs';
 
 export const escapeXML = value => String(value).replace(/[<>&"']/g, char => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&apos;' })[char]);
 export function summarize(repositories, owner) {
@@ -108,7 +107,6 @@ async function main() {
     const temporary = new URL(`../assets/${name}.tmp`, import.meta.url);
     await writeFile(temporary, renderActivity(summary, date, mobile));
     await rename(temporary, output);
-    await writeLightArtwork(name, renderActivity(summary, date, mobile));
   }
   console.log(`Updated public activity for ${owner} (${date}).`);
 }

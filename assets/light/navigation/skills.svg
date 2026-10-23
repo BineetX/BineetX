@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="104" height="36" viewBox="0 0 104 36" role="img" aria-labelledby="title">
-<title id="title">Skills</title>
-<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F6F8FA"/></linearGradient></defs>
-<rect x=".5" y="2.5" width="103" height="31" rx="10" fill="url(#surface)" stroke="#AEBFD0"/>
-<g transform="translate(11 10)" fill="none" stroke="#0879B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 3-4 5 4 5m6-10 4 5-4 5M8 1 6 15"/></g>
-<text x="33" y="22" fill="#1D2E42" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Skills</text>
-</svg>
