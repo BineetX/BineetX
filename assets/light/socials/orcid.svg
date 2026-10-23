@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="72" viewBox="0 0 88 72" role="img" aria-labelledby="title">
+<title id="title">ORCID</title>
+<style>
+.rim{animation:rim 12s linear infinite;animation-delay:-4s}
+.light{animation:light 6s ease-in-out infinite alternate;animation-delay:-2s}
+@keyframes rim{to{stroke-dashoffset:-100}}
+@keyframes light{from{opacity:.4}to{opacity:.85}}
+@media(prefers-reduced-motion:reduce){.rim,.light{animation:none}}
+</style>
+<defs>
+ <linearGradient id="surface" x2="0" y2="1"><stop stop-color="#F1F6FB"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
+ <radialGradient id="light"><stop stop-color="#0369A1" stop-opacity=".2"/><stop offset="1" stop-color="#0369A1" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="4.5" y="4.5" width="79" height="63" rx="16" fill="url(#surface)" stroke="#C5D2DF"/>
+<ellipse class="light" cx="44" cy="37" rx="32" ry="28" fill="url(#light)"/>
+<rect class="rim" x="4.5" y="4.5" width="79" height="63" rx="16" pathLength="100" fill="none" stroke="#0369A1" stroke-width="1" stroke-dasharray="9 91" stroke-linecap="round" opacity=".55"/>
+<g transform="translate(30 22) scale(1.1666667)" fill="#243B53"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></g>
+<path d="M 68 15 H 73 V 20 M 68 20 L 73 15" fill="none" stroke="#0369A1" stroke-width="1" opacity=".55"/>
+</svg>

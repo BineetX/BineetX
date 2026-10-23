@@ -1,4 +1,8 @@
 <picture>
+  <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/banner-mobile-still.svg" />
+  <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/banner-mobile.svg" />
+  <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/banner-still.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/banner.svg" />
   <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-mobile-still.svg" />
   <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-mobile.svg" />
   <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/banner-still.svg" />
@@ -12,31 +16,31 @@
 
 <p align="center">
   <a href="https://www.linkedin.com/in/bineetx/" title="LinkedIn">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin.svg" width="72" height="59" alt="LinkedIn" /></picture>
+    <picture><source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/linkedin-still.svg" /><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/linkedin.svg" /><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/linkedin.svg" width="72" height="59" alt="LinkedIn" /></picture>
   </a>
   <a href="https://scholar.google.com/citations?hl=en&amp;user=9FZtto0AAAAJ" title="Google Scholar">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar.svg" width="72" height="59" alt="Google Scholar" /></picture>
+    <picture><source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/googlescholar-still.svg" /><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/googlescholar.svg" /><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/googlescholar.svg" width="72" height="59" alt="Google Scholar" /></picture>
   </a>
   <a href="https://orcid.org/0000-0002-2447-701X" title="ORCID">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid.svg" width="72" height="59" alt="ORCID" /></picture>
+    <picture><source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/orcid-still.svg" /><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/orcid.svg" /><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/orcid.svg" width="72" height="59" alt="ORCID" /></picture>
   </a>
   <a href="https://www.researchgate.net/profile/Bineet-Kumar-Mohanta" title="ResearchGate">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate.svg" width="72" height="59" alt="ResearchGate" /></picture>
+    <picture><source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/researchgate-still.svg" /><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/researchgate.svg" /><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/researchgate.svg" width="72" height="59" alt="ResearchGate" /></picture>
   </a>
   <a href="https://twitter.com/mr_bineet" title="X / Twitter">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x.svg" width="72" height="59" alt="X / Twitter" /></picture>
+    <picture><source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/x-still.svg" /><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/x.svg" /><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/x.svg" width="72" height="59" alt="X / Twitter" /></picture>
   </a>
   <a href="https://www.youtube.com/c/BioinformaticaYT" title="YouTube — Bioinformatica">
-    <picture><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube.svg" width="72" height="59" alt="YouTube — Bioinformatica" /></picture>
+    <picture><source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/youtube-still.svg" /><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/socials/youtube.svg" /><source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube-still.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/socials/youtube.svg" width="72" height="59" alt="YouTube — Bioinformatica" /></picture>
   </a>
 </p>
 
 <p align="center">
-  <a href="#research" title="Research"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/research.svg" width="104" height="36" alt="Research" /></a>
-  <a href="#skills" title="Skills"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/skills.svg" width="104" height="36" alt="Skills" /></a>
-  <a href="#activity" title="Activity"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/activity.svg" width="104" height="36" alt="Activity" /></a>
-  <a href="#projects" title="Projects"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/projects.svg" width="104" height="36" alt="Projects" /></a>
-  <a href="https://bineet.dev/" title="Portfolio"><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/portfolio.svg" width="104" height="36" alt="Portfolio" /></a>
+  <a href="#research" title="Research"><picture><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/navigation/research.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/research.svg" width="104" height="36" alt="Research" /></picture></a>
+  <a href="#skills" title="Skills"><picture><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/navigation/skills.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/skills.svg" width="104" height="36" alt="Skills" /></picture></a>
+  <a href="#activity" title="Activity"><picture><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/navigation/activity.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/activity.svg" width="104" height="36" alt="Activity" /></picture></a>
+  <a href="#projects" title="Projects"><picture><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/navigation/projects.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/projects.svg" width="104" height="36" alt="Projects" /></picture></a>
+  <a href="https://bineet.dev/" title="Portfolio"><picture><source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/navigation/portfolio.svg" /><img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/navigation/portfolio.svg" width="104" height="36" alt="Portfolio" /></picture></a>
 </p>
 
 <a id="specialization"></a>
@@ -46,6 +50,10 @@
 Heterogeneous graph neural networks for drug synergy prediction.
 
 <picture>
+  <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/research-motion-mobile-still.svg" />
+  <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/research-motion-mobile.svg" />
+  <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/research-motion-still.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/research-motion.svg" />
   <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion-mobile-still.svg" />
   <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion-mobile.svg" />
   <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/research-motion-still.svg" />
@@ -57,6 +65,10 @@ Heterogeneous graph neural networks for drug synergy prediction.
 ### Skills
 
 <picture>
+  <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/skills-mobile-still.svg" />
+  <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/skills-mobile.svg" />
+  <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/skills-still.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/skills.svg" />
   <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills-mobile-still.svg" />
   <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills-mobile.svg" />
   <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/skills-still.svg" />
@@ -91,6 +103,8 @@ Heterogeneous graph neural networks for drug synergy prediction.
 
 <a href="https://github.com/BineetX?tab=repositories">
   <picture>
+    <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/activity-mobile.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/activity.svg" />
     <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/activity-mobile.svg" />
     <img src="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/activity.svg" alt="Public repository activity, refreshed daily by GitHub Actions. Counts exclude forks and the profile repository; language counts use each repository's primary language." width="100%" />
   </picture>
@@ -106,6 +120,10 @@ Heterogeneous graph neural networks for drug synergy prediction.
       <a id="genocular"></a>
       <a href="assets/project_screenshots/genocular.png">
         <picture>
+          <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/genocular-mobile-still.svg" />
+          <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/genocular-mobile.svg" />
+          <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/genocular-still.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/genocular.svg" />
           <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular-mobile-still.svg" />
           <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular-mobile.svg" />
           <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/genocular-still.svg" />
@@ -119,6 +137,10 @@ Heterogeneous graph neural networks for drug synergy prediction.
       <a id="gememiom"></a>
       <a href="assets/project_screenshots/gememiom.png">
         <picture>
+          <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/gememiom-mobile-still.svg" />
+          <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/gememiom-mobile.svg" />
+          <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/gememiom-still.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/gememiom.svg" />
           <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom-mobile-still.svg" />
           <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom-mobile.svg" />
           <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/gememiom-still.svg" />
@@ -134,6 +156,10 @@ Heterogeneous graph neural networks for drug synergy prediction.
       <a id="myocircbase"></a>
       <a href="https://github.com/BineetX/MyoCIRCBase">
         <picture>
+          <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/myocircbase-mobile-still.svg" />
+          <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/myocircbase-mobile.svg" />
+          <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/myocircbase-still.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/myocircbase.svg" />
           <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase-mobile-still.svg" />
           <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase-mobile.svg" />
           <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/myocircbase-still.svg" />
@@ -147,6 +173,10 @@ Heterogeneous graph neural networks for drug synergy prediction.
       <a id="bioinformatica"></a>
       <a href="https://github.com/BineetX/Bioinformatica">
         <picture>
+          <source media="(prefers-color-scheme: light) and (max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/bioinformatica-mobile-still.svg" />
+          <source media="(prefers-color-scheme: light) and (max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/bioinformatica-mobile.svg" />
+          <source media="(prefers-color-scheme: light) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/bioinformatica-still.svg" />
+          <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/light/projects/bioinformatica.svg" />
           <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica-mobile-still.svg" />
           <source media="(max-width: 600px)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica-mobile.svg" />
           <source media="(prefers-reduced-motion: reduce)" srcset="https://cdn.jsdelivr.net/gh/BineetX/BineetX@main/assets/projects/bioinformatica-still.svg" />

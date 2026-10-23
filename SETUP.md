@@ -44,6 +44,21 @@ confirmed by the profile owner. Cloud services and data storage have separate
 rows in the expandable toolkit. The opening specialization table and repeated
 research descriptions were consolidated into the research section and toolkit.
 
+## Light and dark themes
+
+The README selects separate `assets/light/` SVGs with light-only picture sources.
+The original SVGs remain the dark-mode fallbacks. Light sources come first,
+ordered by mobile/reduced-motion combinations before the general light source,
+so both themes keep their responsive layouts and motion preferences.
+The contribution snake already provides both themes and is unchanged.
+
+`scripts/build-light-artwork.mjs` applies a shared light palette to presentation
+attributes only, preserving embedded brand logos, screenshots, masks, and motion.
+Edit its palette to adjust light surfaces, text, borders, and diagram accents.
+`node scripts/build-artwork.mjs` rebuilds both themes; after running an individual
+artwork generator, run `node scripts/build-light-artwork.mjs` as well.
+The activity refresh writes both themes, and the workflow commits `assets/light/`.
+
 ## Motion and interaction
 
 The banner includes scientific software development and mathematical modeling,

@@ -6,6 +6,7 @@ import './build-projects.mjs';
 import './build-project-grid.mjs';
 import './build-socials.mjs';
 import './build-navigation.mjs';
+import { buildLightArtwork } from './build-light-artwork.mjs';
 
 const out = new URL('../assets/', import.meta.url);
 await mkdir(out, { recursive: true });
@@ -123,3 +124,4 @@ for (const name of ['banner', 'banner-mobile', 'genocular', 'gememiom', 'myocirc
   await writeFile(new URL(`${name}-still.svg`, out), animated.replace(/<style>[\s\S]*?<\/style>/, ''));
 }
 console.log('Built animated artwork, mobile variants, and reduced-motion alternatives.');
+await buildLightArtwork();
