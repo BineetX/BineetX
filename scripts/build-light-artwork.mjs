@@ -4,25 +4,38 @@ import { pathToFileURL } from 'node:url';
 
 const assets = new URL('../assets/', import.meta.url);
 const palette = {
-  '#0D1117': '#FFFFFF', '#131E2B': '#F1F6FB', '#152132': '#F1F6FB',
-  '#253347': '#D1D9E0', '#2B3B50': '#C5D2DF', '#314359': '#B8C9D9',
-  '#1D2B3B': '#E2EAF2', '#38566C': '#9AAFC2', '#28465B': '#A5BED1',
-  '#F0F6FC': '#1F2937', '#DDEAF7': '#243B53', '#A7B6CA': '#526579',
-  '#7DD3FC': '#0369A1', '#487891': '#48748B', '#647D95': '#647D95',
-  '#DDF6FF': '#075985', '#B4C6E7': '#5965A6', '#5EEAD4': '#0F766E',
-  '#A5B4FC': '#6366B1',
+  // Mirror the original surface hierarchy: raised highlights above the base,
+  // then frame lines, supporting strokes, accents, and foreground ink.
+  '#0D1117': '#F6F8FA', '#131E2B': '#FFFFFF', '#152132': '#FFFFFF',
+  '#253347': '#C7D2DE', '#2B3B50': '#BDCBD9', '#314359': '#AEBFD0',
+  '#1D2B3B': '#E0E7EE', '#38566C': '#8CA6BC', '#28465B': '#AEC5D7',
+  '#F0F6FC': '#0D1117', '#DDEAF7': '#1D2E42', '#A7B6CA': '#465B72',
+  '#7DD3FC': '#0879B0', '#487891': '#527D96', '#647D95': '#637F98',
+  '#DDF6FF': '#034F7A', '#B4C6E7': '#657AA6', '#5EEAD4': '#0D9488',
+  '#A5B4FC': '#6573B9',
+  // Heatmap keyframes use CSS fills instead of presentation attributes.
+  '#29445D': '#C5E4F1', '#C3F0FF': '#0879B0',
 };
 
 export function lightArtwork(svg) {
-  // Only presentation attributes change. Embedded brand logos, screenshots,
-  // mask luminance, geometry, accessible text, and animation remain intact.
-  return svg.replace(/<(?:rect|path|circle|ellipse|line|polyline|polygon|g|text|stop)\b[^>]*>/g, tag =>
+  // Keep the original drawing and effects. Change only paint colors, including
+  // animated fills; embedded brands, screenshots, and mask luminance stay intact.
+  const artwork = svg.replace(/<(?:rect|path|circle|ellipse|line|polyline|polygon|g|text|stop)\b[^>]*>/g, tag =>
     tag.replace(/\b(fill|stroke|stop-color)="(#[\da-f]{6})"/gi, (attribute, name, color) => {
       const key = color.toUpperCase();
       // White backing plates belong to the raster logos and screenshots.
       if (tag.startsWith('<rect ') && name === 'fill' && key === '#F0F6FC') return attribute;
       return palette[key] ? `${name}="${palette[key]}"` : attribute;
     }));
+  return artwork
+    .replace(/<style>[\s\S]*?<\/style>/g, style =>
+      style.replace(/\b(fill|stroke|stop-color)\s*:\s*(#[\da-f]{6})\b/gi,
+        (declaration, property, color) => palette[color.toUpperCase()]
+          ? `${property}:${palette[color.toUpperCase()]}` : declaration))
+    // Ambient light stays cyan light, rather than becoming an ink-colored haze.
+    // The original gradient shapes, opacity, falloff, and motion are unchanged.
+    .replace(/<radialGradient\b[^>]*>[\s\S]*?<\/radialGradient>/g, gradient =>
+      gradient.replaceAll('stop-color="#0879B0"', 'stop-color="#38BDF8"'));
 }
 
 export async function writeLightArtwork(file, svg) {

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="104" height="36" viewBox="0 0 104 36" role="img" aria-labelledby="title">
 <title id="title">Projects</title>
-<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#F1F6FB"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient></defs>
-<rect x=".5" y="2.5" width="103" height="31" rx="10" fill="url(#surface)" stroke="#B8C9D9"/>
-<g transform="translate(11 10)" fill="none" stroke="#0369A1" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="5" height="5" rx="1"/><rect x="9" y="1" width="5" height="5" rx="1"/><rect x="1" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></g>
-<text x="33" y="22" fill="#243B53" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Projects</text>
+<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F6F8FA"/></linearGradient></defs>
+<rect x=".5" y="2.5" width="103" height="31" rx="10" fill="url(#surface)" stroke="#AEBFD0"/>
+<g transform="translate(11 10)" fill="none" stroke="#0879B0" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="5" height="5" rx="1"/><rect x="9" y="1" width="5" height="5" rx="1"/><rect x="1" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></g>
+<text x="33" y="22" fill="#1D2E42" font-family="Arial, Helvetica, sans-serif" font-size="12.5" font-weight="600">Projects</text>
 </svg>

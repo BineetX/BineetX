@@ -53,7 +53,9 @@ so both themes keep their responsive layouts and motion preferences.
 The contribution snake already provides both themes and is unchanged.
 
 `scripts/build-light-artwork.mjs` applies a shared light palette to presentation
-attributes only, preserving embedded brand logos, screenshots, masks, and motion.
+attributes and animated CSS fills, preserving embedded brand logos, screenshots,
+masks, geometry, and animation timing. Light surfaces mirror the original depth:
+raised highlights sit above a soft neutral base, with cyan ambient lighting.
 Edit its palette to adjust light surfaces, text, borders, and diagram accents.
 `node scripts/build-artwork.mjs` rebuilds both themes; after running an individual
 artwork generator, run `node scripts/build-light-artwork.mjs` as well.

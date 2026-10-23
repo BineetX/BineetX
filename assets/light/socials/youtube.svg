@@ -8,12 +8,12 @@
 @media(prefers-reduced-motion:reduce){.rim,.light{animation:none}}
 </style>
 <defs>
- <linearGradient id="surface" x2="0" y2="1"><stop stop-color="#F1F6FB"/><stop offset="1" stop-color="#FFFFFF"/></linearGradient>
- <radialGradient id="light"><stop stop-color="#0369A1" stop-opacity=".2"/><stop offset="1" stop-color="#0369A1" stop-opacity="0"/></radialGradient>
+ <linearGradient id="surface" x2="0" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F6F8FA"/></linearGradient>
+ <radialGradient id="light"><stop stop-color="#38BDF8" stop-opacity=".2"/><stop offset="1" stop-color="#38BDF8" stop-opacity="0"/></radialGradient>
 </defs>
-<rect x="4.5" y="4.5" width="79" height="63" rx="16" fill="url(#surface)" stroke="#C5D2DF"/>
+<rect x="4.5" y="4.5" width="79" height="63" rx="16" fill="url(#surface)" stroke="#BDCBD9"/>
 <ellipse class="light" cx="44" cy="37" rx="32" ry="28" fill="url(#light)"/>
-<rect class="rim" x="4.5" y="4.5" width="79" height="63" rx="16" pathLength="100" fill="none" stroke="#0369A1" stroke-width="1" stroke-dasharray="9 91" stroke-linecap="round" opacity=".55"/>
-<g transform="translate(30 22) scale(1.1666667)" fill="#243B53"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></g>
-<path d="M 68 15 H 73 V 20 M 68 20 L 73 15" fill="none" stroke="#0369A1" stroke-width="1" opacity=".55"/>
+<rect class="rim" x="4.5" y="4.5" width="79" height="63" rx="16" pathLength="100" fill="none" stroke="#0879B0" stroke-width="1" stroke-dasharray="9 91" stroke-linecap="round" opacity=".55"/>
+<g transform="translate(30 22) scale(1.1666667)" fill="#1D2E42"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></g>
+<path d="M 68 15 H 73 V 20 M 68 20 L 73 15" fill="none" stroke="#0879B0" stroke-width="1" opacity=".55"/>
 </svg>
